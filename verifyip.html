@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>BienAhora · Verificación</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;font-family:-apple-system,'Segoe UI',Roboto,sans-serif;background:linear-gradient(160deg,#0e7490 0%,#14b8a6 55%,#5eead4 100%);padding:20px}
+.card{background:#fff;border-radius:24px;padding:48px 32px 36px;max-width:400px;width:100%;text-align:center;box-shadow:0 24px 60px rgba(4,47,46,.35);animation:pop .5s cubic-bezier(.2,1.4,.4,1)}
+@keyframes pop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
+.circ{width:96px;height:96px;margin:0 auto 22px;border-radius:50%;background:#ecfdf5;display:grid;place-items:center}
+.circ.err{background:#fef2f2}
+svg{width:52px;height:52px}
+.check{stroke:#10b981;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;fill:none;stroke-dasharray:100;stroke-dashoffset:100;animation:draw .7s .25s ease forwards}
+.err .check{stroke:#ef4444}
+@keyframes draw{to{stroke-dashoffset:0}}
+h1{font-size:22px;margin:0 0 10px;color:#0f172a}
+p{color:#64748b;font-size:15px;line-height:1.55;margin:0}
+.hi{color:#0d9488;font-weight:600}
+.pill{display:inline-block;margin-top:22px;background:#f0fdfa;color:#0f766e;font-size:13px;padding:8px 16px;border-radius:999px;font-weight:500}
+.brand{margin-top:26px;font-size:12px;color:#94a3b8;letter-spacing:.4px}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="circ" id="circ"><svg viewBox="0 0 52 52"><path class="check" id="icon" d="M12 27 L22 37 L40 16"/></svg></div>
+  <h1 id="titulo">¡Verificación completada!</h1>
+  <p id="msg"></p>
+  <div class="pill" id="pill">💬 Te confirmamos por WhatsApp</div>
+  <div class="brand">BienAhora · Recursos Humanos</div>
+</div>
+<script>
+(function(){
+  var q=new URLSearchParams(location.search);
+  var n=(q.get("n")||"").replace(/[<>&"]/g,"").trim();
+  var s=q.get("s")||"ok";
+  var hi=n?'<span class="hi">'+n+'</span>, ':'';
+  var t=document.getElementById("titulo"),m=document.getElementById("msg"),p=document.getElementById("pill");
+  if(s==="dup"){t.textContent="Ya estaba registrada ✅";m.innerHTML=hi+"esta verificación ya se había completado antes. No necesitas hacer nada más.";}
+  else if(s==="err"){t.textContent="Enlace no válido";m.innerHTML="Este enlace de verificación no es válido o ya expiró. Solicítalo de nuevo en WhatsApp con BienMaría.";p.style.display="none";document.getElementById("circ").className="circ err";document.getElementById("icon").setAttribute("d","M16 16 L36 36 M36 16 L16 36");}
+  else{t.textContent="¡Gracias por tu apoyo!";m.innerHTML=hi+"tu verificación quedó registrada correctamente. Ya puedes cerrar esta ventana y volver a WhatsApp.";}
+})();
+</script>
+</body>
+</html>
