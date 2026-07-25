@@ -1,0 +1,798 @@
+{
+  "generado": "2026-07-25T17:08:07.119Z",
+  "project_ref": "wcijfoaawfuqnxhqolpz",
+  "total": 113,
+  "funciones": [
+    {
+      "slug": "admin-accesos",
+      "verify_jwt": false,
+      "version": 14,
+      "status": "ACTIVE",
+      "actualizada": 1782773918087
+    },
+    {
+      "slug": "agenda-backfill",
+      "verify_jwt": false,
+      "version": 4,
+      "status": "ACTIVE",
+      "actualizada": 1782962839988
+    },
+    {
+      "slug": "api-health",
+      "verify_jwt": false,
+      "version": 5,
+      "status": "ACTIVE",
+      "actualizada": 1783695905081
+    },
+    {
+      "slug": "aprecio-guardar",
+      "verify_jwt": false,
+      "version": 10,
+      "status": "ACTIVE",
+      "actualizada": 1782108256885
+    },
+    {
+      "slug": "archivo-load",
+      "verify_jwt": false,
+      "version": 2,
+      "status": "ACTIVE",
+      "actualizada": 1784338689640
+    },
+    {
+      "slug": "backfill-contacts",
+      "verify_jwt": false,
+      "version": 29,
+      "status": "ACTIVE",
+      "actualizada": 1784301393800
+    },
+    {
+      "slug": "bf-expositor",
+      "verify_jwt": false,
+      "version": 10,
+      "status": "ACTIVE",
+      "actualizada": 1784916204837
+    },
+    {
+      "slug": "bhx",
+      "verify_jwt": false,
+      "version": 18,
+      "status": "ACTIVE",
+      "actualizada": 1782268203315
+    },
+    {
+      "slug": "biencal-admin",
+      "verify_jwt": false,
+      "version": 3,
+      "status": "ACTIVE",
+      "actualizada": 1783273467921
+    },
+    {
+      "slug": "biencal-config",
+      "verify_jwt": true,
+      "version": 6,
+      "status": "ACTIVE",
+      "actualizada": 1783353820029
+    },
+    {
+      "slug": "biencal-email",
+      "verify_jwt": false,
+      "version": 3,
+      "status": "ACTIVE",
+      "actualizada": 1783274198046
+    },
+    {
+      "slug": "build-css",
+      "verify_jwt": false,
+      "version": 2,
+      "status": "ACTIVE",
+      "actualizada": 1783810469526
+    },
+    {
+      "slug": "build-legacy",
+      "verify_jwt": false,
+      "version": 8,
+      "status": "ACTIVE",
+      "actualizada": 1783835953826
+    },
+    {
+      "slug": "calendly-sync",
+      "verify_jwt": false,
+      "version": 10,
+      "status": "ACTIVE",
+      "actualizada": 1782449293139
+    },
+    {
+      "slug": "calendly-webhook",
+      "verify_jwt": false,
+      "version": 9,
+      "status": "ACTIVE",
+      "actualizada": 1782451575943
+    },
+    {
+      "slug": "candidato-accion",
+      "verify_jwt": false,
+      "version": 9,
+      "status": "ACTIVE",
+      "actualizada": 1782132110501
+    },
+    {
+      "slug": "comisiones",
+      "verify_jwt": false,
+      "version": 4,
+      "status": "ACTIVE",
+      "actualizada": 1783109296527
+    },
+    {
+      "slug": "compra-intake",
+      "verify_jwt": false,
+      "version": 17,
+      "status": "ACTIVE",
+      "actualizada": 1782316054764
+    },
+    {
+      "slug": "compra-retry",
+      "verify_jwt": true,
+      "version": 10,
+      "status": "ACTIVE",
+      "actualizada": 1781758521726
+    },
+    {
+      "slug": "contacts-backfill-active",
+      "verify_jwt": true,
+      "version": 10,
+      "status": "ACTIVE",
+      "actualizada": 1782437169846
+    },
+    {
+      "slug": "contacts-fresh",
+      "verify_jwt": false,
+      "version": 16,
+      "status": "ACTIVE",
+      "actualizada": 1784301480890
+    },
+    {
+      "slug": "cp-load",
+      "verify_jwt": false,
+      "version": 3,
+      "status": "ACTIVE",
+      "actualizada": 1784526524334
+    },
+    {
+      "slug": "cultura-guardar",
+      "verify_jwt": false,
+      "version": 9,
+      "status": "ACTIVE",
+      "actualizada": 1782108424098
+    },
+    {
+      "slug": "dash-seguimiento",
+      "verify_jwt": true,
+      "version": 26,
+      "status": "ACTIVE",
+      "actualizada": 1784251223427
+    },
+    {
+      "slug": "dash-seguimiento-lite",
+      "verify_jwt": true,
+      "version": 2,
+      "status": "ACTIVE",
+      "actualizada": 1784347996735
+    },
+    {
+      "slug": "dash-web",
+      "verify_jwt": true,
+      "version": 2,
+      "status": "ACTIVE",
+      "actualizada": 1783655979220
+    },
+    {
+      "slug": "enagic-load",
+      "verify_jwt": false,
+      "version": 20,
+      "status": "ACTIVE",
+      "actualizada": 1780894632024
+    },
+    {
+      "slug": "evaluacion-guardar",
+      "verify_jwt": false,
+      "version": 10,
+      "status": "ACTIVE",
+      "actualizada": 1782109936727
+    },
+    {
+      "slug": "fn-backup-git",
+      "verify_jwt": true,
+      "version": 4,
+      "status": "ACTIVE",
+      "actualizada": 1784998413607
+    },
+    {
+      "slug": "ga-pages-sync",
+      "verify_jwt": false,
+      "version": 8,
+      "status": "ACTIVE",
+      "actualizada": 1782139629826
+    },
+    {
+      "slug": "ga-query",
+      "verify_jwt": false,
+      "version": 16,
+      "status": "ACTIVE",
+      "actualizada": 1781073616014
+    },
+    {
+      "slug": "ga-sync",
+      "verify_jwt": false,
+      "version": 21,
+      "status": "ACTIVE",
+      "actualizada": 1781067279631
+    },
+    {
+      "slug": "get-csf",
+      "verify_jwt": false,
+      "version": 9,
+      "status": "ACTIVE",
+      "actualizada": 1781755304633
+    },
+    {
+      "slug": "gh-commit",
+      "verify_jwt": false,
+      "version": 2,
+      "status": "ACTIVE",
+      "actualizada": 1784232770938
+    },
+    {
+      "slug": "gh-deploy",
+      "verify_jwt": false,
+      "version": 13,
+      "status": "ACTIVE",
+      "actualizada": 1783814123093
+    },
+    {
+      "slug": "gh-puttree",
+      "verify_jwt": false,
+      "version": 6,
+      "status": "ACTIVE",
+      "actualizada": 1783801068203
+    },
+    {
+      "slug": "goto-call",
+      "verify_jwt": false,
+      "version": 26,
+      "status": "ACTIVE",
+      "actualizada": 1783635485738
+    },
+    {
+      "slug": "goto-hook",
+      "verify_jwt": false,
+      "version": 6,
+      "status": "ACTIVE",
+      "actualizada": 1782585954600
+    },
+    {
+      "slug": "goto-oauth",
+      "verify_jwt": false,
+      "version": 5,
+      "status": "ACTIVE",
+      "actualizada": 1782670506289
+    },
+    {
+      "slug": "goto-rec-hook",
+      "verify_jwt": false,
+      "version": 3,
+      "status": "ACTIVE",
+      "actualizada": 1782585685152
+    },
+    {
+      "slug": "goto-recording",
+      "verify_jwt": false,
+      "version": 8,
+      "status": "ACTIVE",
+      "actualizada": 1782583862373
+    },
+    {
+      "slug": "goto-rectest",
+      "verify_jwt": false,
+      "version": 5,
+      "status": "ACTIVE",
+      "actualizada": 1782591495035
+    },
+    {
+      "slug": "goto-sync",
+      "verify_jwt": true,
+      "version": 8,
+      "status": "ACTIVE",
+      "actualizada": 1782485802584
+    },
+    {
+      "slug": "gsc-lookup",
+      "verify_jwt": false,
+      "version": 8,
+      "status": "ACTIVE",
+      "actualizada": 1782139202361
+    },
+    {
+      "slug": "gsc-pages-sync",
+      "verify_jwt": false,
+      "version": 8,
+      "status": "ACTIVE",
+      "actualizada": 1782137720285
+    },
+    {
+      "slug": "gsc-sync",
+      "verify_jwt": false,
+      "version": 15,
+      "status": "ACTIVE",
+      "actualizada": 1781074689080
+    },
+    {
+      "slug": "h2-tagger",
+      "verify_jwt": true,
+      "version": 8,
+      "status": "ACTIVE",
+      "actualizada": 1782271337678
+    },
+    {
+      "slug": "health-alert",
+      "verify_jwt": false,
+      "version": 3,
+      "status": "ACTIVE",
+      "actualizada": 1783697736461
+    },
+    {
+      "slug": "historia-backfill",
+      "verify_jwt": false,
+      "version": 9,
+      "status": "ACTIVE",
+      "actualizada": 1781891602037
+    },
+    {
+      "slug": "historia-mass",
+      "verify_jwt": false,
+      "version": 11,
+      "status": "ACTIVE",
+      "actualizada": 1781897916063
+    },
+    {
+      "slug": "lead-intake",
+      "verify_jwt": false,
+      "version": 23,
+      "status": "ACTIVE",
+      "actualizada": 1782314843996
+    },
+    {
+      "slug": "lead-retry",
+      "verify_jwt": true,
+      "version": 10,
+      "status": "ACTIVE",
+      "actualizada": 1781712030987
+    },
+    {
+      "slug": "log-acceso",
+      "verify_jwt": false,
+      "version": 6,
+      "status": "ACTIVE",
+      "actualizada": 1784125879397
+    },
+    {
+      "slug": "mbti-guardar",
+      "verify_jwt": false,
+      "version": 12,
+      "status": "ACTIVE",
+      "actualizada": 1782108205417
+    },
+    {
+      "slug": "meta-adclone",
+      "verify_jwt": false,
+      "version": 14,
+      "status": "ACTIVE",
+      "actualizada": 1781506770046
+    },
+    {
+      "slug": "meta-adlinks",
+      "verify_jwt": false,
+      "version": 9,
+      "status": "ACTIVE",
+      "actualizada": 1781846765696
+    },
+    {
+      "slug": "meta-audiences",
+      "verify_jwt": false,
+      "version": 24,
+      "status": "ACTIVE",
+      "actualizada": 1781379140107
+    },
+    {
+      "slug": "meta-fix-utm",
+      "verify_jwt": true,
+      "version": 3,
+      "status": "ACTIVE",
+      "actualizada": 1784995882592
+    },
+    {
+      "slug": "meta-hist",
+      "verify_jwt": false,
+      "version": 21,
+      "status": "ACTIVE",
+      "actualizada": 1781072222127
+    },
+    {
+      "slug": "meta-lal-value",
+      "verify_jwt": false,
+      "version": 21,
+      "status": "ACTIVE",
+      "actualizada": 1781380607256
+    },
+    {
+      "slug": "meta-names",
+      "verify_jwt": false,
+      "version": 9,
+      "status": "ACTIVE",
+      "actualizada": 1781236526981
+    },
+    {
+      "slug": "meta-sync",
+      "verify_jwt": true,
+      "version": 23,
+      "status": "ACTIVE",
+      "actualizada": 1784994878971
+    },
+    {
+      "slug": "meta-urltags",
+      "verify_jwt": false,
+      "version": 18,
+      "status": "ACTIVE",
+      "actualizada": 1781809334883
+    },
+    {
+      "slug": "ontraport-push",
+      "verify_jwt": false,
+      "version": 14,
+      "status": "ACTIVE",
+      "actualizada": 1782453740995
+    },
+    {
+      "slug": "ontraport-tags-dict",
+      "verify_jwt": false,
+      "version": 20,
+      "status": "ACTIVE",
+      "actualizada": 1780892308176
+    },
+    {
+      "slug": "ontraport-tracking",
+      "verify_jwt": false,
+      "version": 20,
+      "status": "ACTIVE",
+      "actualizada": 1780885309886
+    },
+    {
+      "slug": "op-compra-flag",
+      "verify_jwt": true,
+      "version": 9,
+      "status": "ACTIVE",
+      "actualizada": 1782277993638
+    },
+    {
+      "slug": "op-dedup",
+      "verify_jwt": false,
+      "version": 5,
+      "status": "ACTIVE",
+      "actualizada": 1783050013694
+    },
+    {
+      "slug": "op-dedup-merge",
+      "verify_jwt": false,
+      "version": 4,
+      "status": "ACTIVE",
+      "actualizada": 1783050524578
+    },
+    {
+      "slug": "op-field-audit",
+      "verify_jwt": false,
+      "version": 23,
+      "status": "ACTIVE",
+      "actualizada": 1780888946865
+    },
+    {
+      "slug": "op-fields",
+      "verify_jwt": false,
+      "version": 16,
+      "status": "ACTIVE",
+      "actualizada": 1782148836287
+    },
+    {
+      "slug": "op-findfield",
+      "verify_jwt": true,
+      "version": 8,
+      "status": "ACTIVE",
+      "actualizada": 1782273540051
+    },
+    {
+      "slug": "op-meta",
+      "verify_jwt": false,
+      "version": 16,
+      "status": "ACTIVE",
+      "actualizada": 1783026856211
+    },
+    {
+      "slug": "op-meta-temp",
+      "verify_jwt": false,
+      "version": 10,
+      "status": "ACTIVE",
+      "actualizada": 1783384727766
+    },
+    {
+      "slug": "op-meta-tmp",
+      "verify_jwt": true,
+      "version": 29,
+      "status": "ACTIVE",
+      "actualizada": 1781821406949
+    },
+    {
+      "slug": "op-owner-fix",
+      "verify_jwt": true,
+      "version": 8,
+      "status": "ACTIVE",
+      "actualizada": 1782311594636
+    },
+    {
+      "slug": "op-owners-tmp",
+      "verify_jwt": true,
+      "version": 16,
+      "status": "ACTIVE",
+      "actualizada": 1782320983071
+    },
+    {
+      "slug": "op-peek",
+      "verify_jwt": true,
+      "version": 11,
+      "status": "ACTIVE",
+      "actualizada": 1782487807397
+    },
+    {
+      "slug": "op-prune",
+      "verify_jwt": false,
+      "version": 4,
+      "status": "ACTIVE",
+      "actualizada": 1784131908680
+    },
+    {
+      "slug": "op-push-calls",
+      "verify_jwt": true,
+      "version": 3,
+      "status": "ACTIVE",
+      "actualizada": 1782487902873
+    },
+    {
+      "slug": "op-push-full",
+      "verify_jwt": true,
+      "version": 10,
+      "status": "ACTIVE",
+      "actualizada": 1782247798356
+    },
+    {
+      "slug": "op-push-historia",
+      "verify_jwt": true,
+      "version": 14,
+      "status": "ACTIVE",
+      "actualizada": 1782489176199
+    },
+    {
+      "slug": "op-push-score",
+      "verify_jwt": false,
+      "version": 9,
+      "status": "ACTIVE",
+      "actualizada": 1782148678757
+    },
+    {
+      "slug": "op-push-wa",
+      "verify_jwt": true,
+      "version": 15,
+      "status": "ACTIVE",
+      "actualizada": 1782585696531
+    },
+    {
+      "slug": "op-retag",
+      "verify_jwt": false,
+      "version": 8,
+      "status": "ACTIVE",
+      "actualizada": 1782079172864
+    },
+    {
+      "slug": "op-tags",
+      "verify_jwt": true,
+      "version": 8,
+      "status": "ACTIVE",
+      "actualizada": 1782272233689
+    },
+    {
+      "slug": "op-verify",
+      "verify_jwt": false,
+      "version": 9,
+      "status": "ACTIVE",
+      "actualizada": 1782078664337
+    },
+    {
+      "slug": "outbox-worker",
+      "verify_jwt": false,
+      "version": 7,
+      "status": "ACTIVE",
+      "actualizada": 1783276653903
+    },
+    {
+      "slug": "perfil-guardar",
+      "verify_jwt": false,
+      "version": 9,
+      "status": "ACTIVE",
+      "actualizada": 1782108442789
+    },
+    {
+      "slug": "push-conversions",
+      "verify_jwt": false,
+      "version": 23,
+      "status": "ACTIVE",
+      "actualizada": 1781375915048
+    },
+    {
+      "slug": "recordatorios",
+      "verify_jwt": false,
+      "version": 3,
+      "status": "ACTIVE",
+      "actualizada": 1783041931902
+    },
+    {
+      "slug": "referidos-push",
+      "verify_jwt": false,
+      "version": 3,
+      "status": "ACTIVE",
+      "actualizada": 1784527048328
+    },
+    {
+      "slug": "report360",
+      "verify_jwt": false,
+      "version": 11,
+      "status": "ACTIVE",
+      "actualizada": 1781283940304
+    },
+    {
+      "slug": "resolve-booking",
+      "verify_jwt": false,
+      "version": 7,
+      "status": "ACTIVE",
+      "actualizada": 1783353823365
+    },
+    {
+      "slug": "rh-empleado",
+      "verify_jwt": false,
+      "version": 9,
+      "status": "ACTIVE",
+      "actualizada": 1782324207355
+    },
+    {
+      "slug": "rh-import",
+      "verify_jwt": false,
+      "version": 8,
+      "status": "ACTIVE",
+      "actualizada": 1782177638568
+    },
+    {
+      "slug": "rh-panel",
+      "verify_jwt": false,
+      "version": 3,
+      "status": "ACTIVE",
+      "actualizada": 1783050106799
+    },
+    {
+      "slug": "rrhh-reintegrate",
+      "verify_jwt": false,
+      "version": 2,
+      "status": "ACTIVE",
+      "actualizada": 1783722991702
+    },
+    {
+      "slug": "seg-note",
+      "verify_jwt": false,
+      "version": 38,
+      "status": "ACTIVE",
+      "actualizada": 1784272266240
+    },
+    {
+      "slug": "ses-webhook",
+      "verify_jwt": false,
+      "version": 3,
+      "status": "ACTIVE",
+      "actualizada": 1783272333594
+    },
+    {
+      "slug": "stripe-list",
+      "verify_jwt": false,
+      "version": 4,
+      "status": "ACTIVE",
+      "actualizada": 1782493895575
+    },
+    {
+      "slug": "sync-llamar",
+      "verify_jwt": false,
+      "version": 6,
+      "status": "ACTIVE",
+      "actualizada": 1783381311930
+    },
+    {
+      "slug": "tabla-import",
+      "verify_jwt": true,
+      "version": 8,
+      "status": "ACTIVE",
+      "actualizada": 1782180979349
+    },
+    {
+      "slug": "tag-tests",
+      "verify_jwt": true,
+      "version": 8,
+      "status": "ACTIVE",
+      "actualizada": 1782251786806
+    },
+    {
+      "slug": "track",
+      "verify_jwt": false,
+      "version": 12,
+      "status": "ACTIVE",
+      "actualizada": 1782110618039
+    },
+    {
+      "slug": "ui-prefs",
+      "verify_jwt": false,
+      "version": 2,
+      "status": "ACTIVE",
+      "actualizada": 1783829685901
+    },
+    {
+      "slug": "verifica",
+      "verify_jwt": false,
+      "version": 12,
+      "status": "ACTIVE",
+      "actualizada": 1782977636558
+    },
+    {
+      "slug": "wa-assign",
+      "verify_jwt": false,
+      "version": 9,
+      "status": "ACTIVE",
+      "actualizada": 1782143558388
+    },
+    {
+      "slug": "wa-info-tmp",
+      "verify_jwt": true,
+      "version": 4,
+      "status": "ACTIVE",
+      "actualizada": 1783011940863
+    },
+    {
+      "slug": "wa-register",
+      "verify_jwt": true,
+      "version": 10,
+      "status": "ACTIVE",
+      "actualizada": 1781979955043
+    },
+    {
+      "slug": "whatsapp-fichaje",
+      "verify_jwt": false,
+      "version": 48,
+      "status": "ACTIVE",
+      "actualizada": 1783042238726
+    },
+    {
+      "slug": "whatsapp-inbound",
+      "verify_jwt": false,
+      "version": 26,
+      "status": "ACTIVE",
+      "actualizada": 1782139298186
+    },
+    {
+      "slug": "yt-sync",
+      "verify_jwt": false,
+      "version": 16,
+      "status": "ACTIVE",
+      "actualizada": 1781099811177
+    }
+  ]
+}
