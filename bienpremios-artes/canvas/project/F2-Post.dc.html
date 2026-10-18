@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Dirección F2 · Portada con eco · post 4:5</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:"Fiorina Grande";src:url("/_blob/1af7dc8a0421fe9d7394b366718932ed") format("woff2");font-weight:400;font-style:normal}
+@font-face{font-family:"Fiorina Grande";src:url("/_blob/1331e8420289aae196e7f0eb7419073f") format("woff2");font-weight:400;font-style:italic}
+@font-face{font-family:"Fiorina Subhead";src:url("/_blob/2aefc2cf4d0c783c1a257288f3013926") format("woff2");font-weight:400;font-style:normal}
+@font-face{font-family:"Futura";src:url("/_blob/794e319d8ebe117b5da69d03bdda8419") format("woff2");font-weight:500;font-style:normal}
+@font-face{font-family:"Futura";src:url("/_blob/28b675453421b95d9c24fea468df3466") format("woff2");font-weight:700;font-style:normal}
+body{margin:0}
+a{color:#C9A961}a:hover{color:#F3DDA0}
+.mk{-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.m-rinat{-webkit-mask-image:url("/_blob/033a7a7c6b3900d7bdacd33984eb3c7e");mask-image:url("/_blob/033a7a7c6b3900d7bdacd33984eb3c7e")}
+.m-paola{-webkit-mask-image:url("/_blob/78236343fd9baca95e887ceb8f06281b");mask-image:url("/_blob/78236343fd9baca95e887ceb8f06281b")}
+.m-rebecca{-webkit-mask-image:url("/_blob/c97ef8d90aed4f2abcb33f592b54674d");mask-image:url("/_blob/c97ef8d90aed4f2abcb33f592b54674d")}
+.m-arlette{-webkit-mask-image:url("/_blob/3236147155130c786920a9ac1f01e43d");mask-image:url("/_blob/3236147155130c786920a9ac1f01e43d")}
+.m-juanluis{-webkit-mask-image:url("/_blob/db03a0c7fdb2a02937c6ade90e11df9a");mask-image:url("/_blob/db03a0c7fdb2a02937c6ade90e11df9a")}
+</style>
+</helmet>
+<div style="width: 5800px; height: 1570px; box-sizing: border-box; padding: 80px; background: #1C1B19; display: flex; gap: 60px">
+  <sc-for list="{{fases}}" as="p" hint-placeholder-count="5">
+    <div style="display: flex; flex-direction: column; gap: 24px">
+      <div style="height: 36px; font-family: 'Futura', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: 0.24em; color: #B8B4AB">{{p.etiqueta}}</div>
+      <div style="position: relative; width: 1080px; height: 1350px; overflow: hidden; background: {{p.bg}}">
+
+        <div style="position: absolute; left: 0; right: 0; top: 44px; display: flex; flex-direction: column; align-items: center; gap: 12px">
+          <div style="display: flex; align-items: center; gap: 26px">
+            <div style="width: 110px; height: 1px; background: {{p.filo}}"></div>
+            <div style="display: flex; align-items: center; gap: 18px">
+              <img src="{{p.logo}}" alt="BienPremios" style="width: {{p.logoW}}px; height: auto; display: block">
+              <span style="font-family: 'Fiorina Grande', serif; line-height: 0.8; font-size: {{p.xTam}}px; color: {{p.xColor}}">X</span>
+            </div>
+            <div style="width: 110px; height: 1px; background: {{p.filo}}"></div>
+          </div>
+          <div style="font-family: 'Futura', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.42em; color: {{p.meta}}">DÉCIMA EDICIÓN</div>
+        </div>
+
+        <div style="position: absolute; left: 60px; right: 60px; top: 172px">
+          <div style="text-align: center; font-family: 'Fiorina Grande', serif; font-weight: 400; line-height: 0.9; letter-spacing: -0.025em; white-space: nowrap; color: transparent; -webkit-background-clip: text; background-clip: text; font-size: {{p.mast}}px; background-image: {{p.mastBg}}">{{p.palabra}}</div>
+          <sc-if value="{{p.linea2}}" hint-placeholder-val="{{ false }}">
+            <div style="margin-top: -24px; padding-right: 60px; text-align: right; font-family: 'Fiorina Grande', serif; font-style: italic; line-height: 0.9; letter-spacing: -0.02em; font-size: 116px; color: transparent; -webkit-background-clip: text; background-clip: text; background-image: {{p.oficialBg}}">{{p.linea2}}</div>
+          </sc-if>
+        </div>
+        <div style="position: absolute; left: 0; right: 0; top: {{p.bajada}}px; text-align: center; font-family: 'Futura', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.36em; color: {{p.accent}}">BIENPREMIOS 2026 · CDMX</div>
+
+        <div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: {{p.xTop}}px; text-align: center; font-family: 'Fiorina Grande', serif; font-size: 1080px; line-height: 0.8; color: transparent; -webkit-background-clip: text; background-clip: text; background-image: {{p.xBg}}; opacity: {{p.xOp}}">X</div>
+        <sc-for list="{{p.ecos}}" as="e" hint-placeholder-count="4">
+          <div class="mk {{p.mascara}}" style="position: absolute; top: {{p.top}}px; left: {{e.x}}px; width: {{p.ancho}}px; height: {{p.alto}}px; opacity: {{e.o}}; filter: {{e.f}}; background: {{e.bg}}"></div>
+        </sc-for>
+        <img src="{{p.foto}}" alt="Figura de la persona nominada" style="position: absolute; top: {{p.top}}px; left: {{p.izq}}px; width: {{p.ancho}}px; height: {{p.alto}}px; filter: drop-shadow(0 26px 42px rgba(0,0,0,0.30))">
+        <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 500px; background: {{p.velo}}"></div>
+
+        <div style="position: absolute; right: 6px; top: {{p.selloY}}px; transform: rotate(-8deg)">
+          <div style="position: relative; width: {{p.s.w}}px; height: {{p.s.h}}px">
+            <svg aria-hidden="true" viewBox="0 0 {{p.s.w}} {{p.s.h}}" width="{{p.s.w}}" height="{{p.s.h}}" style="position: absolute; left: 0; top: 0">
+              <path d="{{p.s.tallos}}" fill="none" stroke="{{p.hoja2}}" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+            <sc-for list="{{p.s.hojas}}" as="h" hint-placeholder-count="36">
+              <div style="position: absolute; border-radius: 50%; left: {{h.l}}px; top: {{h.t}}px; width: {{h.w}}px; height: {{h.h}}px; transform: rotate({{h.r}}deg); background: {{h.bg}}"></div>
+            </sc-for>
+            <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-align: center">
+              <img src="/_blob/b642db18d04ded2ea11283a89718d8b0" alt="" style="width: 36px; height: auto; display: block">
+              <div style="font-family: 'Fiorina Grande', serif; font-style: italic; font-size: 30px; line-height: 1; color: {{p.accent}}">2026</div>
+              <div style="font-family: 'Futura', sans-serif; font-weight: 700; font-size: 8px; letter-spacing: 0.24em; color: {{p.ink}}">DÉCIMA EDICIÓN</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="position: absolute; left: 64px; right: 64px; bottom: 120px; display: flex; flex-direction: column; align-items: flex-start">
+          <div style="font-family: 'Fiorina Grande', serif; line-height: 0.95; letter-spacing: -0.015em; white-space: nowrap; font-size: {{p.tamNombre}}px"><span style="color: {{p.ink}}">{{p.nombre}}</span><span style="color: {{p.accent}}">{{p.apellido}}</span></div>
+          <div style="margin-top: 20px; display: flex; align-items: center; gap: 14px">
+            <div style="width: 34px; height: 2px; background: {{p.accent}}"></div>
+            <div style="font-family: 'Futura', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.3em; color: {{p.accent}}">{{p.enCat}}</div>
+          </div>
+          <div style="margin-top: 10px; max-width: 950px; font-family: 'Fiorina Subhead', serif; font-size: 38px; line-height: 1.18; color: {{p.ink}}">{{p.cat}}</div>
+        </div>
+        <div style="position: absolute; left: 64px; right: 64px; bottom: 46px; display: flex; justify-content: space-between; align-items: flex-end">
+          <div style="font-family: 'Futura', sans-serif; font-weight: 500; font-size: 16px; letter-spacing: 0.26em; color: {{p.ink}}">{{p.link}}</div>
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 5px">
+            <div style="display: flex; align-items: flex-end; gap: 3px; height: 34px">
+              <sc-for list="{{p.barras}}" as="b" hint-placeholder-count="30">
+                <div style="height: 100%; width: {{b.w}}px; background: {{p.ink}}"></div>
+              </sc-for>
+            </div>
+            <div style="font-family: 'Futura', sans-serif; font-weight: 500; font-size: 9px; letter-spacing: 0.3em; color: {{p.ink}}">7 502026 100010</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-for>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":5800,"height":1570}}'>
+class Component extends DCLogic {
+  sello(k, bg) {
+    const cx = 230, cy = 170, R = 135, hojas = [];
+    for (let i = 0; i < 9; i++) {
+      const deg = 118 + i * 15, t = deg * Math.PI / 180, s = 1 - i * 0.04;
+      [[R + 12, -32], [R - 12, 32]].forEach(([rr, tilt]) => {
+        const rot = deg + 90 + tilt, rx = 19 * s, ry = 7 * s;
+        const a = rot * Math.PI / 180;
+        const x = cx + rr * Math.cos(t) + Math.cos(a) * rx * 0.6;
+        const y = cy + rr * Math.sin(t) + Math.sin(a) * rx * 0.6;
+        [[x, rot], [2 * cx - x, 180 - rot]].forEach(([hx, hr]) => hojas.push({
+          l: ((hx - rx) * k).toFixed(1), t: ((y - ry) * k).toFixed(1),
+          w: (2 * rx * k).toFixed(1), h: (2 * ry * k).toFixed(1), r: hr.toFixed(1), bg,
+        }));
+      });
+    }
+    const pt = (deg) => [cx + R * Math.cos(deg * Math.PI / 180), cy + R * Math.sin(deg * Math.PI / 180)];
+    const [a0, a1] = [pt(114), pt(242)];
+    const f = (v) => (v * k).toFixed(1);
+    const tallos = 'M ' + f(a0[0]) + ' ' + f(a0[1]) + ' A ' + f(R) + ' ' + f(R) + ' 0 0 1 ' + f(a1[0]) + ' ' + f(a1[1]) +
+      ' M ' + f(2 * cx - a0[0]) + ' ' + f(a0[1]) + ' A ' + f(R) + ' ' + f(R) + ' 0 0 0 ' + f(2 * cx - a1[0]) + ' ' + f(a1[1]);
+    return { hojas, tallos, w: Math.round(460 * k), h: Math.round(300 * k) };
+  }
+  barras(seed) {
+    let s = seed;
+    const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
+    return Array.from({ length: 26 }, () => ({ w: (1 + Math.floor(r() * 4)).toString() }));
+  }
+  renderVals() {
+    const oro = 'linear-gradient(115deg, #8A6224 0%, #D9A441 26%, #F7DE9C 48%, #C99A3E 68%, #8A6224 100%)';
+    const oroMetal = 'linear-gradient(115deg, #7A5520 0%, #E8C57A 28%, #FFF1C8 44%, #C99A3E 60%, #8A6224 80%, #E1B452 100%)';
+    const rojoMetal = 'linear-gradient(115deg, #4A0B12 0%, #B61827 30%, #F06A72 46%, #8E1420 64%, #4A0B12 100%)';
+    const cremaMetal = 'linear-gradient(115deg, #CDB68A 0%, #FFF8EC 42%, #E9D9B8 60%, #BFA474 100%)';
+    const vinoMetal = 'linear-gradient(115deg, #1F0709 0%, #5A1822 40%, #8E2A36 50%, #2A0A0F 100%)';
+    /* prop = ancho / alto del recorte; cabeza = y donde empieza la cabeza; la figura siempre llega al borde de abajo. */
+    const P = [
+      { foto: '/_blob/033a7a7c6b3900d7bdacd33984eb3c7e', mascara: 'm-rinat', prop: 991 / 1300, cabeza: 380, nombre: 'Rinat ', apellido: 'Kalifah', tamNombre: 100, cat: 'Nutriólogo(a) con mayor impacto en el BienEstar', h: 'RINATKALIFAH' },
+      { foto: '/_blob/78236343fd9baca95e887ceb8f06281b', mascara: 'm-paola', prop: 1354 / 1300, cabeza: 470, dx: 40, nombre: 'Paola ', apellido: 'de la Garza', tamNombre: 96, cat: 'Especialista o Coach de Salud Emocional y/o Mental', h: 'PAOLADELAGARZA' },
+      { foto: '/_blob/c97ef8d90aed4f2abcb33f592b54674d', mascara: 'm-rebecca', prop: 838 / 1300, cabeza: 350, nombre: 'Rebecca ', apellido: 'Sutton', tamNombre: 100, cat: 'Coach de Actividad Física o Fitness', h: 'REBECCASUTTON' },
+      { foto: '/_blob/3236147155130c786920a9ac1f01e43d', mascara: 'm-arlette', prop: 717 / 1300, cabeza: 380, nombre: 'Arlette ', apellido: 'Ramírez', tamNombre: 100, cat: 'Blogger o Influencer con mayor impacto en el BienEstar', h: 'ARLETTERAMIREZ' },
+      { foto: '/_blob/db03a0c7fdb2a02937c6ade90e11df9a', mascara: 'm-juanluis', prop: 987 / 1300, cabeza: 380, nombre: 'Juan Luis ', apellido: 'Gallardo', tamNombre: 92, cat: 'Médico Funcional / Médico Integral', h: '' },
+    ];
+    /* Una sola forma para todos. Tamaños medidos con la tipografía para que cada palabra quepa sin salirse. */
+    const PAL = [['Nominado', 150], ['Nominado', 150], ['Semifinalista', 122], ['Finalista', 180], ['Ganador', 180]];
+    const ETQ = ['NOMINADO', 'NOMINADO OFICIAL', 'SEMIFINALISTA', 'FINALISTA', 'GANADOR'];
+    const F = [
+      { linea2: '', bg: 'radial-gradient(85% 50% at 50% 42%, #FFFBF2 0%, #EFE8DC 55%, #DCCDB4 100%)', mastBg: 'linear-gradient(#1A1A1A, #1A1A1A)', ink: '#1A1A1A', accent: '#8E1420', logo: '/_blob/44ea847f62e736dc5e2001f0260df91b', logoW: 360, xTam: 114, xColor: '#B8893A', xBg: oro, xOp: 0.16, filo: 'rgba(26,26,26,0.28)', meta: '#6F675C', velo: 'linear-gradient(0deg, #E6DCCB 0%, #E9E0D0 40%, rgba(233,224,208,0) 100%)', hoja: 'linear-gradient(90deg, #8A6224, #D9A441)', hoja2: '#9A6E2A',
+        eco: [oroMetal, rojoMetal], o: [0.30, 0.13] },
+      { linea2: 'oficial', oficialBg: oro, bg: 'radial-gradient(85% 55% at 50% 40%, #DA3442 0%, #B61827 45%, #6E0D17 100%)', mastBg: 'linear-gradient(#FFF8EC, #FFF8EC)', ink: '#FFF8EC', accent: '#F3DDA0', logo: '/_blob/f027519cad3491f9a18bb9701212c8b1', logoW: 330, xTam: 104, xColor: '#F3DDA0', xBg: oro, xOp: 0.14, filo: 'rgba(243,221,160,0.55)', meta: '#F3DDA0', velo: 'linear-gradient(0deg, #8A121D 0%, #9E1521 40%, rgba(158,21,33,0) 100%)', hoja: 'linear-gradient(90deg, #E1B452, #F7DE9C)', hoja2: '#F3DDA0',
+        eco: [cremaMetal, oroMetal], o: [0.28, 0.12] },
+      { linea2: '', bg: 'radial-gradient(85% 55% at 50% 40%, #5E1823 0%, #3A0E14 50%, #1A0608 100%)', mastBg: oro, ink: '#F5F2EB', accent: '#E1B452', logo: '/_blob/f027519cad3491f9a18bb9701212c8b1', logoW: 330, xTam: 104, xColor: '#E1B452', xBg: oro, xOp: 0.13, filo: 'rgba(225,180,82,0.45)', meta: '#C9A961', velo: 'linear-gradient(0deg, #1F0709 0%, #2A0A0F 40%, rgba(42,10,15,0) 100%)', hoja: 'linear-gradient(90deg, #C99A3E, #F7DE9C)', hoja2: '#E1B452',
+        eco: [oroMetal, rojoMetal], o: [0.30, 0.13] },
+      { linea2: '', bg: 'radial-gradient(85% 55% at 50% 40%, #2E2618 0%, #0E0D0B 55%, #050505 100%)', mastBg: oro, ink: '#F5F2EB', accent: '#E1B452', logo: '/_blob/3f55c8410a4215c5202f523d66a689e0', logoW: 360, xTam: 114, xColor: '#C9A961', xBg: oro, xOp: 0.12, filo: 'rgba(225,180,82,0.40)', meta: '#9C8A63', velo: 'linear-gradient(0deg, #050505 0%, #080808 40%, rgba(8,8,8,0) 100%)', hoja: 'linear-gradient(90deg, #8A6224, #F7DE9C)', hoja2: '#C9A961',
+        eco: [rojoMetal, oroMetal], o: [0.32, 0.14] },
+      { linea2: '', bg: 'linear-gradient(160deg, #9A6E2A 0%, #D9A441 28%, #F7DE9C 50%, #D4A94E 72%, #9A6E2A 100%)', mastBg: 'linear-gradient(#1A1A1A, #1A1A1A)', ink: '#1A1A1A', accent: '#8E1420', logo: '/_blob/4737e819375c0f86dab6d2d0dd4786c6', logoW: 360, xTam: 114, xColor: '#1A1A1A', xBg: 'linear-gradient(115deg, #1A1A1A 0%, #5A4317 50%, #1A1A1A 100%)', xOp: 0.09, filo: 'rgba(26,26,26,0.35)', meta: '#4A3410', velo: 'linear-gradient(0deg, #B88A3A 0%, rgba(184,138,58,0.88) 34%, rgba(184,138,58,0) 100%)', hoja: 'linear-gradient(90deg, #5A1018, #8E1420)', hoja2: '#8E1420',
+        eco: [rojoMetal, vinoMetal], o: [0.28, 0.12] },
+    ];
+    const fases = F.map((f, i) => {
+      const p = P[i];
+      const alto = 1350 - p.cabeza, ancho = Math.round(alto * p.prop);
+      const izq = Math.round((1080 - ancho) / 2) + (p.dx || 0);
+      const [palabra, mast] = PAL[i];
+      const bajada = f.linea2 ? 410 : Math.round(172 + mast * 0.9 + 22);
+      /* Dos ecos por lado: el cercano nítido, el lejano más tenue y apenas difuminado. */
+      const ecos = [];
+      [[1, 0, 'none'], [2, 1, 'blur(2px)']].forEach(([n, k, fl]) => {
+        ecos.push({ x: izq - 52 * n, o: f.o[k], f: fl, bg: f.eco[0] });
+        ecos.push({ x: izq + 52 * n, o: f.o[k], f: fl, bg: f.eco[1] });
+      });
+      return Object.assign({}, f, p, {
+        palabra, mast, alto, ancho, izq, bajada, ecos: ecos.reverse(),
+        top: p.cabeza, xTop: p.cabeza - 50,
+        selloY: bajada + 18,
+        enCat: ETQ[i] + ' EN LA CATEGORÍA',
+        etiqueta: ETQ[i] + ' · POST 1080×1350',
+        s: this.sello(0.5, f.hoja), barras: this.barras(311 + i * 71),
+        link: p.h ? 'BIENPREMIOS.COM/N/' + p.h : 'BIENPREMIOS.COM',
+      });
+    });
+    return { fases };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Marco para foto de perfil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:"Futura";src:url("/_blob/794e319d8ebe117b5da69d03bdda8419") format("woff2");font-weight:500;font-style:normal}
+@font-face{font-family:"Futura";src:url("/_blob/28b675453421b95d9c24fea468df3466") format("woff2");font-weight:700;font-style:normal}
+body{margin:0}
+a{color:#C9A961}a:hover{color:#F3DDA0}
+</style>
+</helmet>
+<div style="width: 3400px; height: 820px; box-sizing: border-box; padding: 80px; background: #1C1B19; display: flex; gap: 60px">
+  <sc-for list="{{fases}}" as="p" hint-placeholder-count="5">
+    <div style="display: flex; flex-direction: column; gap: 24px">
+      <div style="height: 36px; font-family: 'Futura', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: 0.24em; color: #B8B4AB">{{p.n}} · {{p.corto}}</div>
+      <div style="position: relative; width: 600px; height: 600px">
+        <img src="/_blob/58e80b3401e182f6caeb6d506fd58523" alt="Foto de perfil de la persona nominada" style="position: absolute; left: 0; top: 0; width: 600px; height: 600px; border-radius: 50%; object-fit: cover; object-position: 50% 22%; display: block">
+        <svg aria-hidden="true" viewBox="0 0 600 600" width="600" height="600" style="position: absolute; left: 0; top: 0">
+          <defs>
+            <linearGradient id="pfg{{$index}}" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="{{p.b1}}"></stop>
+              <stop offset="0.5" stop-color="{{p.b2}}"></stop>
+              <stop offset="1" stop-color="{{p.b3}}"></stop>
+            </linearGradient>
+            <path id="pfa{{$index}}" d="M 48 300 A 252 252 0 0 0 552 300"></path>
+          </defs>
+          <circle cx="300" cy="300" r="297" fill="none" stroke="{{p.aro}}" stroke-width="6"></circle>
+          <use href="#pfa{{$index}}" fill="none" stroke="url(#pfg{{$index}})" stroke-width="84" stroke-linecap="round"></use>
+          <text font-family="Futura, sans-serif" font-weight="700" font-size="25" letter-spacing="3" fill="{{p.txt}}" dy="9">
+            <textPath href="#pfa{{$index}}" startOffset="50%" text-anchor="middle">{{p.texto}}</textPath>
+          </text>
+        </svg>
+        <div style="position: absolute; left: 446px; top: 26px; width: 132px; height: 132px; box-sizing: border-box; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #0A0A0A; border: 3px solid {{p.aro}}">
+          <img src="/_blob/b642db18d04ded2ea11283a89718d8b0" alt="" style="width: 90px; height: auto; display: block">
+        </div>
+      </div>
+    </div>
+  </sc-for>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":3400,"height":820}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const fases = [
+      { n: '01', corto: 'NOMINADA', texto: 'NOMINADA · BIENPREMIOS 2026', b1: '#0A0A0A', b2: '#141312', b3: '#0A0A0A', txt: '#E1B452', aro: '#C9A961' },
+      { n: '02', corto: 'NOMINADA OFICIAL', texto: 'NOMINADA OFICIAL · BIENPREMIOS 2026', b1: '#0A0A0A', b2: '#7A0F1A', b3: '#B61827', txt: '#F7F4EE', aro: '#E1B452' },
+      { n: '03', corto: 'SEMIFINALISTA', texto: 'SEMIFINALISTA · BIENPREMIOS 2026', b1: '#2A0C10', b2: '#44121A', b3: '#2A0C10', txt: '#F3DDA0', aro: '#E1B452' },
+      { n: '04', corto: 'FINALISTA', texto: 'FINALISTA · BIENPREMIOS 2026', b1: '#8E1420', b2: '#C8202F', b3: '#8E1420', txt: '#F7DE9C', aro: '#F7DE9C' },
+      { n: '05', corto: 'GANADORA', texto: 'GANADORA · BIENPREMIOS 2026', b1: '#9A6E2A', b2: '#F7DE9C', b3: '#9A6E2A', txt: '#1A1A1A', aro: '#D9A441' },
+    ];
+    return { fases };
+  }
+}
+</script>
+</body>
+</html>

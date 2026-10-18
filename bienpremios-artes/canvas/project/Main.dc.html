@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Guía de artes por etapa</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:"Fiorina Grande";src:url("/_blob/1af7dc8a0421fe9d7394b366718932ed") format("woff2");font-weight:400;font-style:normal}
+@font-face{font-family:"Fiorina Grande";src:url("/_blob/1331e8420289aae196e7f0eb7419073f") format("woff2");font-weight:400;font-style:italic}
+@font-face{font-family:"Fiorina Title";src:url("/_blob/efee3ad49f72c4757b56ad07369ca699") format("woff2");font-weight:400;font-style:normal}
+@font-face{font-family:"Fiorina Subhead";src:url("/_blob/2aefc2cf4d0c783c1a257288f3013926") format("woff2");font-weight:400;font-style:normal}
+@font-face{font-family:"Fiorina Subhead";src:url("/_blob/686ac3953816f516899d261d63f65cb5") format("woff2");font-weight:400;font-style:italic}
+@font-face{font-family:"Futura";src:url("/_blob/794e319d8ebe117b5da69d03bdda8419") format("woff2");font-weight:500;font-style:normal}
+@font-face{font-family:"Futura";src:url("/_blob/28b675453421b95d9c24fea468df3466") format("woff2");font-weight:700;font-style:normal}
+@font-face{font-family:"Avenir Next";src:url("/_blob/6dbcd90163aee84797706fa9d44b4269") format("woff2");font-weight:500;font-style:normal}
+body{margin:0}
+a{color:#C9A961}a:hover{color:#F3DDA0}
+</style>
+</helmet>
+<div style="width: 2400px; height: 1400px; box-sizing: border-box; padding: 110px 120px; background: #0A0A0A; color: #F5F2EB; font-family: 'Avenir Next', sans-serif; display: flex; flex-direction: column; gap: 64px">
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 80px">
+    <div style="display: flex; flex-direction: column; gap: 26px">
+      <img src="/_blob/3f55c8410a4215c5202f523d66a689e0" alt="BienPremios" style="height: 58px; width: auto; align-self: flex-start">
+      <div style="font-family: 'Futura', sans-serif; font-weight: 500; font-size: 22px; letter-spacing: 0.26em; color: #9C8A63">BIENPREMIOS 2026 · DÉCIMA EDICIÓN · ARTES POR ETAPA</div>
+      <h1 style="margin: 0; font-family: 'Fiorina Grande', serif; font-weight: 400; font-size: 112px; line-height: 1; letter-spacing: -0.01em">Cinco etapas. <span style="color: #C9A961">Una escalera.</span></h1>
+    </div>
+    <p style="margin: 0; max-width: 760px; font-family: 'Fiorina Subhead', serif; font-size: 32px; line-height: 1.35; color: #B8B4AB">El fondo sube de intensidad en cada etapa: del negro editorial al oro de la gala. Se reconoce la etapa antes de leer una palabra.</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 32px">
+    <sc-for list="{{fases}}" as="p" hint-placeholder-count="5">
+      <div style="height: 760px; box-sizing: border-box; border-radius: 22px; padding: 44px 40px; display: flex; flex-direction: column; gap: 22px; border: 1px solid rgba(245,242,235,0.10); background: {{p.bg}}; color: {{p.ink}}">
+        <div style="display: flex; justify-content: space-between; align-items: baseline">
+          <div style="font-family: 'Fiorina Grande', serif; font-size: 96px; line-height: 1; color: {{p.accent}}">{{p.n}}</div>
+          <div style="font-family: 'Futura', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.24em; color: {{p.muted}}">{{p.etapa}}</div>
+        </div>
+        <div style="font-family: 'Fiorina Grande', serif; font-style: italic; font-size: 54px; line-height: 1.05; color: {{p.ink}}">{{p.st}}</div>
+        <div style="font-family: 'Futura', sans-serif; font-weight: 500; font-size: 18px; letter-spacing: 0.18em; color: {{p.ink2}}">{{p.fechas}}</div>
+        <div style="display: flex">
+          <div style="display: inline-flex; align-items: center; height: 58px; padding: 0 30px; border-radius: 999px; box-sizing: border-box; font-family: 'Futura', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.2em; background: {{p.chipBg}}; color: {{p.chipInk}}; border: {{p.chipBorder}}; box-shadow: {{p.chipShadow}}">{{p.chip}}</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 10px">
+          <div style="display: flex; gap: 8px">
+            <sc-for list="{{p.segs}}" as="s" hint-placeholder-count="5">
+              <div style="flex: 1; height: 6px; border-radius: 3px; background: {{s.c}}"></div>
+            </sc-for>
+          </div>
+          <div style="font-family: 'Futura', sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0.22em; color: {{p.muted}}">ETAPA {{p.n}} DE 05</div>
+        </div>
+        <div style="height: 1px; background: {{p.line}}; margin: 8px 0"></div>
+        <div style="font-family: 'Futura', sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0.22em; color: {{p.muted}}">LLAMADA</div>
+        <div style="font-family: 'Fiorina Subhead', serif; font-size: 28px; line-height: 1.3; color: {{p.ink}}">{{p.uso}}</div>
+        <div style="margin-top: auto; display: flex; gap: 14px; align-items: center">
+          <sc-for list="{{p.sw}}" as="w" hint-placeholder-count="3">
+            <div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-start">
+              <div style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid rgba(245,242,235,0.35); background: {{w.c}}"></div>
+              <div style="font-family: 'Futura', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; color: {{p.ink2}}">{{w.c}}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; border-top: 1px solid rgba(201,169,97,0.25); padding-top: 40px">
+    <div style="display: flex; align-items: baseline; gap: 24px">
+      <span style="font-family: 'Fiorina Grande', serif; font-style: italic; font-size: 64px; color: #C9A961; line-height: 1">Finalista</span>
+      <span style="font-family: 'Futura', sans-serif; font-weight: 500; font-size: 16px; letter-spacing: 0.2em; color: #9C8A63">FIORINA GRANDE · ESTATUS Y NOMBRE</span>
+    </div>
+    <div style="display: flex; align-items: baseline; gap: 24px">
+      <span style="font-family: 'Fiorina Subhead', serif; font-size: 38px; color: #F5F2EB; line-height: 1">Health Coach o asesor de salud</span>
+      <span style="font-family: 'Futura', sans-serif; font-weight: 500; font-size: 16px; letter-spacing: 0.2em; color: #9C8A63">FIORINA SUBHEAD · CATEGORÍA</span>
+    </div>
+    <div style="display: flex; align-items: baseline; gap: 24px">
+      <span style="font-family: 'Futura', sans-serif; font-weight: 700; font-size: 24px; letter-spacing: 0.24em; color: #F5F2EB; line-height: 1">VOTA HASTA EL 29 DIC</span>
+      <span style="font-family: 'Futura', sans-serif; font-weight: 500; font-size: 16px; letter-spacing: 0.2em; color: #9C8A63">FUTURA · ETAPAS, FECHAS, LLAMADAS</span>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":2400,"height":1400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const F = [
+      { n: '01', etapa: 'NOMINACIÓN', st: 'Nominada · Nominado', chip: 'NOMINADA', fechas: '21 SEP — 25 OCT 2026', uso: 'Me nominaron. La lista oficial se revela el 29 de octubre.', bg: '#0A0A0A', solid: '#0A0A0A', ink: '#F5F2EB', ink2: '#B8B4AB', muted: '#9C8A63', accent: '#C9A961', line: 'rgba(201,169,97,0.35)', segOn: '#C9A961', segOff: 'rgba(245,242,235,0.16)', chipBg: 'transparent', chipInk: '#E1B452', chipBorder: '2px solid #C9A961', chipShadow: 'none' },
+      { n: '02', etapa: 'LISTA OFICIAL', st: 'Nominada oficial', chip: 'NOMINADA OFICIAL', fechas: 'DESDE EL 29 OCT 2026', uso: 'Vota por mí hasta el 29 de diciembre, con mi liga personal.', bg: 'radial-gradient(120% 55% at 50% 100%, rgba(182,24,39,0.45) 0%, rgba(182,24,39,0) 70%), #0A0A0A', solid: '#B61827', ink: '#F5F2EB', ink2: '#C9C3B8', muted: '#B39A66', accent: '#E1B452', line: 'rgba(225,180,82,0.35)', segOn: '#E1B452', segOff: 'rgba(245,242,235,0.16)', chipBg: '#B61827', chipInk: '#F7F4EE', chipBorder: '3px solid #E1B452', chipShadow: '0 0 30px rgba(182,24,39,0.55)' },
+      { n: '03', etapa: 'SEMIFINAL', st: 'Semifinalista', chip: 'SEMIFINALISTA', fechas: '4 ENE — 28 FEB 2027', uso: 'Vota por mí del 4 de enero al 28 de febrero.', bg: 'radial-gradient(110% 70% at 50% 30%, #44121A 0%, #1A0A0B 72%)', solid: '#44121A', ink: '#F5F2EB', ink2: '#DCCFC0', muted: '#C9A961', accent: '#E1B452', line: 'rgba(225,180,82,0.35)', segOn: '#E1B452', segOff: 'rgba(245,242,235,0.18)', chipBg: '#F5F2EB', chipInk: '#1A0A0B', chipBorder: '0 solid transparent', chipShadow: 'none' },
+      { n: '04', etapa: 'FINAL', st: 'Finalista', chip: 'FINALISTA', fechas: '2 — 18 MAR 2027', uso: 'Votación final: del 2 al 18 de marzo. Cada voto cuenta.', bg: 'radial-gradient(110% 70% at 50% 28%, #C8202F 0%, #8E1420 55%, #4A0B12 100%)', solid: '#B61827', ink: '#FFF8EC', ink2: '#F6E6C4', muted: '#F3DDA0', accent: '#F7DE9C', line: 'rgba(247,222,156,0.45)', segOn: '#F7DE9C', segOff: 'rgba(255,248,236,0.22)', chipBg: 'linear-gradient(115deg, #8A6224 0%, #D9A441 26%, #F7DE9C 48%, #C99A3E 68%, #8A6224 100%)', chipInk: '#1A1A1A', chipBorder: '0 solid transparent', chipShadow: '0 10px 30px rgba(40,10,10,0.35)' },
+      { n: '05', etapa: 'GALA', st: 'Ganadora · Ganador', chip: 'GANADORA', fechas: 'GALA · ABRIL 2027 · CDMX', uso: 'Gracias por cada voto. Ganadora BienPremios 2026.', bg: 'linear-gradient(160deg, #9A6E2A 0%, #D9A441 28%, #F7DE9C 50%, #D4A94E 72%, #9A6E2A 100%)', solid: '#D9A441', ink: '#1A1A1A', ink2: '#33281A', muted: '#4A3410', accent: '#8E1420', line: 'rgba(26,26,26,0.30)', segOn: '#1A1A1A', segOff: 'rgba(26,26,26,0.18)', chipBg: '#0A0A0A', chipInk: '#E1B452', chipBorder: '0 solid transparent', chipShadow: '0 10px 30px rgba(60,40,10,0.35)' },
+    ];
+    const fases = F.map((p, i) => Object.assign({}, p, {
+      segs: [0, 1, 2, 3, 4].map((k) => ({ c: k <= i ? p.segOn : p.segOff })),
+      sw: [{ c: p.solid }, { c: p.accent }, { c: p.ink }],
+    }));
+    return { fases };
+  }
+}
+</script>
+</body>
+</html>

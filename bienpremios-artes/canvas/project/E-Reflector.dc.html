@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Dirección E · Bajo el reflector</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:"Fiorina Grande";src:url("/_blob/1af7dc8a0421fe9d7394b366718932ed") format("woff2");font-weight:400;font-style:normal}
+@font-face{font-family:"Fiorina Grande";src:url("/_blob/1331e8420289aae196e7f0eb7419073f") format("woff2");font-weight:400;font-style:italic}
+@font-face{font-family:"Fiorina Subhead";src:url("/_blob/686ac3953816f516899d261d63f65cb5") format("woff2");font-weight:400;font-style:italic}
+@font-face{font-family:"Futura";src:url("/_blob/794e319d8ebe117b5da69d03bdda8419") format("woff2");font-weight:500;font-style:normal}
+@font-face{font-family:"Futura";src:url("/_blob/28b675453421b95d9c24fea468df3466") format("woff2");font-weight:700;font-style:normal}
+body{margin:0}
+a{color:#C9A961}a:hover{color:#F3DDA0}
+</style>
+</helmet>
+<div style="width: 5800px; height: 2140px; box-sizing: border-box; padding: 80px; background: #1C1B19; display: flex; gap: 60px">
+  <sc-for list="{{fases}}" as="p" hint-placeholder-count="5">
+    <div style="display: flex; flex-direction: column; gap: 24px">
+      <div style="height: 36px; font-family: 'Futura', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: 0.24em; color: #B8B4AB">{{p.etiqueta}}</div>
+      <div style="position: relative; width: 1080px; height: 1920px; overflow: hidden; background: {{p.bg}}">
+        <div style="position: absolute; left: 40px; top: 0; width: 1000px; height: 1420px; filter: blur(34px); clip-path: polygon(40% 0, 60% 0, 96% 100%, 4% 100%); background: {{p.haz}}"></div>
+        <div style="position: absolute; left: 120px; top: 1250px; width: 840px; height: 170px; border-radius: 50%; background: {{p.piso}}"></div>
+        <sc-for list="{{p.polvo}}" as="d" hint-placeholder-count="20">
+          <div style="position: absolute; border-radius: {{d.radio}}; left: {{d.x}}px; top: {{d.y}}px; width: {{d.w}}px; height: {{d.h}}px; opacity: {{d.o}}; transform: rotate({{d.r}}deg); background: {{d.c}}; box-shadow: 0 0 {{d.g}}px {{d.c}}"></div>
+        </sc-for>
+
+        <img src="{{p.foto}}" alt="" style="position: absolute; left: 90px; top: 1330px; width: 900px; height: 770px; object-fit: contain; object-position: 50% 100%; transform: scaleY(-1); opacity: 0.26; -webkit-mask-image: linear-gradient(0deg, #000 0%, rgba(0,0,0,0) 34%); mask-image: linear-gradient(0deg, #000 0%, rgba(0,0,0,0) 34%)">
+        <img src="{{p.foto}}" alt="Figura de la persona nominada" style="position: absolute; left: 90px; top: 560px; width: 900px; height: 770px; object-fit: contain; object-position: 50% 100%; filter: drop-shadow(0 0 2px rgba(255,240,214,0.55)) drop-shadow(0 0 46px rgba(255,236,200,0.20))">
+
+        <div style="position: absolute; left: 0; right: 0; top: 118px; display: flex; justify-content: center">
+          <div style="position: relative; width: {{p.s.w}}px; height: {{p.s.h}}px">
+            <svg aria-hidden="true" viewBox="0 0 {{p.s.w}} {{p.s.h}}" width="{{p.s.w}}" height="{{p.s.h}}" style="position: absolute; left: 0; top: 0">
+              <path d="{{p.s.tallos}}" fill="none" stroke="#C9A961" stroke-width="3" stroke-linecap="round"></path>
+            </svg>
+            <sc-for list="{{p.s.hojas}}" as="h" hint-placeholder-count="36">
+              <div style="position: absolute; border-radius: 50%; left: {{h.l}}px; top: {{h.t}}px; width: {{h.w}}px; height: {{h.h}}px; transform: rotate({{h.r}}deg); background: linear-gradient(90deg, #8A6224 0%, #E1B452 45%, #F7DE9C 100%)"></div>
+            </sc-for>
+            <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center">
+              <img src="/_blob/1619d8e965e5ae964b1959ae2efa6e42" alt="" style="width: 78px; height: auto; display: block; margin-top: -26px">
+              <div style="font-family: 'Futura', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 0.36em; color: #C9A961">BIENPREMIOS 2026</div>
+              <div style="font-family: 'Fiorina Grande', serif; font-style: italic; line-height: 0.95; white-space: pre-line; font-size: {{p.tam}}px; color: {{p.titulo}}">{{p.st}}</div>
+              <div style="font-family: 'Futura', sans-serif; font-weight: 500; font-size: 16px; letter-spacing: 0.36em; color: #9C8A63">DÉCIMA EDICIÓN</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="position: absolute; left: 70px; right: 70px; top: 1452px; display: flex; flex-direction: column; align-items: center; text-align: center">
+          <div style="font-family: 'Fiorina Grande', serif; font-size: 104px; line-height: 1; letter-spacing: -0.01em"><span style="color: #F5F2EB">{{p.nombre}}</span><span style="color: #E1B452">{{p.apellido}}</span></div>
+          <div style="margin-top: 22px; max-width: 880px; font-family: 'Fiorina Subhead', serif; font-style: italic; font-size: 36px; line-height: 1.3; color: #B8B4AB">{{p.cat}}</div>
+          <div style="margin-top: 34px; font-family: 'Futura', sans-serif; font-weight: 500; font-size: 21px; letter-spacing: 0.26em; color: #C9A961">{{p.link}}</div>
+        </div>
+        <div style="position: absolute; left: 0; right: 0; bottom: 92px; display: flex; justify-content: center">
+          <img src="/_blob/3f55c8410a4215c5202f523d66a689e0" alt="BienPremios" style="height: 40px; width: auto; display: block">
+        </div>
+      </div>
+    </div>
+  </sc-for>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":5800,"height":2140}}'>
+class Component extends DCLogic {
+  sello(k) {
+    const cx = 230, cy = 170, R = 135, hojas = [];
+    for (let i = 0; i < 9; i++) {
+      const deg = 118 + i * 15, t = deg * Math.PI / 180, s = 1 - i * 0.04;
+      [[R + 12, -32], [R - 12, 32]].forEach(([rr, tilt]) => {
+        const rot = deg + 90 + tilt, rx = 19 * s, ry = 7 * s;
+        const a = rot * Math.PI / 180;
+        const x = cx + rr * Math.cos(t) + Math.cos(a) * rx * 0.6;
+        const y = cy + rr * Math.sin(t) + Math.sin(a) * rx * 0.6;
+        [[x, rot], [2 * cx - x, 180 - rot]].forEach(([hx, hr]) => hojas.push({
+          l: ((hx - rx) * k).toFixed(1), t: ((y - ry) * k).toFixed(1),
+          w: (2 * rx * k).toFixed(1), h: (2 * ry * k).toFixed(1), r: hr.toFixed(1),
+        }));
+      });
+    }
+    const pt = (deg) => [cx + R * Math.cos(deg * Math.PI / 180), cy + R * Math.sin(deg * Math.PI / 180)];
+    const [a0, a1] = [pt(114), pt(242)];
+    const f = (v) => (v * k).toFixed(1);
+    const tallos = 'M ' + f(a0[0]) + ' ' + f(a0[1]) + ' A ' + f(R) + ' ' + f(R) + ' 0 0 1 ' + f(a1[0]) + ' ' + f(a1[1]) +
+      ' M ' + f(2 * cx - a0[0]) + ' ' + f(a0[1]) + ' A ' + f(R) + ' ' + f(R) + ' 0 0 0 ' + f(2 * cx - a1[0]) + ' ' + f(a1[1]);
+    return { hojas, tallos, w: Math.round(460 * k), h: Math.round(300 * k) };
+  }
+  polvo(seed, n, oro) {
+    let s = seed;
+    const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
+    const out = [];
+    for (let i = 0; i < n; i++) {
+      const confeti = oro && i % 3 === 0;
+      const w = confeti ? 6 + r() * 8 : 2 + r() * 5;
+      out.push({
+        x: (60 + r() * 960).toFixed(0), y: (40 + r() * 1300).toFixed(0),
+        w: w.toFixed(1), h: (confeti ? w * 0.4 : w).toFixed(1),
+        radio: confeti ? '1px' : '50%', r: (r() * 180).toFixed(0),
+        o: (0.25 + r() * 0.7).toFixed(2), g: (confeti ? 6 : w * 3).toFixed(0),
+        c: i % 4 === 0 ? '#FFF3CF' : '#E1B452',
+      });
+    }
+    return out;
+  }
+  renderVals() {
+    const P = [
+      { foto: '/_blob/3236147155130c786920a9ac1f01e43d', g: 0, nombre: 'Arlette ', apellido: 'Ramírez', cat: 'Blogger o Influencer con mayor impacto en el BienEstar', h: 'ARLETTERAMIREZ' },
+      { foto: '/_blob/db03a0c7fdb2a02937c6ade90e11df9a', g: 1, nombre: 'Juan Luis ', apellido: 'Gallardo', cat: 'Médico Funcional / Médico Integral', h: 'JUANLUISGALLARDO' },
+      { foto: '/_blob/1cceeed14459223c1ca8d1e2475d926c', g: 0, nombre: 'Wera ', apellido: 'de la Garza', cat: 'Coach de Actividad Física o Fitness', h: 'WERADELAGARZA' },
+      { foto: '/_blob/a63588365724cb7f2f63de53d45dd582', g: 0, nombre: 'Mary ', apellido: 'Cardona', cat: 'Podcast enfocado al BienEstar', h: 'MARYCARDONA' },
+      { foto: '/_blob/0b9acf992da011820409f565879ab595', g: 1, nombre: 'Marco Antonio ', apellido: 'Regil', cat: 'Profesional con mayor impacto en el BienEstar y la salud', h: '' },
+    ];
+    const ST = [['Nominada', 'Nominado'], ['Nominada\noficial', 'Nominado\noficial'], ['Semifinalista', 'Semifinalista'], ['Finalista', 'Finalista'], ['Ganadora', 'Ganador']];
+    const TAM = [64, 50, 46, 66, 66];
+    const F = [
+      { bg: '#070707', haz: 'linear-gradient(180deg, rgba(255,241,214,0.34) 0%, rgba(255,241,214,0.06) 85%, rgba(255,241,214,0) 100%)', piso: 'radial-gradient(closest-side, rgba(255,236,200,0.30), rgba(255,236,200,0))', n: 26, titulo: '#F5F2EB' },
+      { bg: '#070707', haz: 'linear-gradient(180deg, rgba(255,226,214,0.34) 0%, rgba(255,226,214,0.06) 85%, rgba(255,226,214,0) 100%)', piso: 'radial-gradient(closest-side, rgba(182,24,39,0.60), rgba(182,24,39,0))', n: 30, titulo: '#F5F2EB' },
+      { bg: 'radial-gradient(120% 55% at 50% 100%, #2A0A0F 0%, #070707 70%)', haz: 'linear-gradient(180deg, rgba(255,226,206,0.32) 0%, rgba(255,226,206,0.06) 85%, rgba(255,226,206,0) 100%)', piso: 'radial-gradient(closest-side, rgba(225,180,82,0.40), rgba(225,180,82,0))', n: 36, titulo: '#F3DDA0' },
+      { bg: 'radial-gradient(120% 55% at 50% 100%, #4A0B12 0%, #070707 72%)', haz: 'linear-gradient(180deg, rgba(255,210,186,0.36) 0%, rgba(255,210,186,0.07) 85%, rgba(255,210,186,0) 100%)', piso: 'radial-gradient(closest-side, rgba(200,32,47,0.70), rgba(200,32,47,0))', n: 44, titulo: '#F7DE9C' },
+      { bg: 'radial-gradient(120% 55% at 50% 100%, #3A2A10 0%, #070707 75%)', haz: 'linear-gradient(180deg, rgba(255,232,170,0.44) 0%, rgba(255,232,170,0.08) 85%, rgba(255,232,170,0) 100%)', piso: 'radial-gradient(closest-side, rgba(247,222,156,0.65), rgba(247,222,156,0))', n: 84, titulo: '#F7DE9C' },
+    ];
+    const fases = F.map((f, i) => {
+      const p = P[i], st = ST[i][p.g];
+      return Object.assign({}, f, p, {
+        st, tam: TAM[i], s: this.sello(1.32),
+        etiqueta: st.replace('\n', ' ').toUpperCase() + ' · BAJO EL REFLECTOR',
+        polvo: this.polvo(97 + i * 131, f.n, i === 4),
+        link: p.h ? 'BIENPREMIOS.COM/N/' + p.h : 'BIENPREMIOS.COM · GANADORES 2026',
+      });
+    });
+    return { fases };
+  }
+}
+</script>
+</body>
+</html>
