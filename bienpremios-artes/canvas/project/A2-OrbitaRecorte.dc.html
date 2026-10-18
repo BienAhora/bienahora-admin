@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Dirección A2 · Órbita con recorte · historias</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:"Fiorina Grande";src:url("/_blob/1331e8420289aae196e7f0eb7419073f") format("woff2");font-weight:400;font-style:italic}
+@font-face{font-family:"Fiorina Title";src:url("/_blob/efee3ad49f72c4757b56ad07369ca699") format("woff2");font-weight:400;font-style:normal}
+@font-face{font-family:"Fiorina Subhead";src:url("/_blob/2aefc2cf4d0c783c1a257288f3013926") format("woff2");font-weight:400;font-style:normal}
+@font-face{font-family:"Futura";src:url("/_blob/794e319d8ebe117b5da69d03bdda8419") format("woff2");font-weight:500;font-style:normal}
+@font-face{font-family:"Futura";src:url("/_blob/28b675453421b95d9c24fea468df3466") format("woff2");font-weight:700;font-style:normal}
+body{margin:0}
+a{color:#C9A961}a:hover{color:#F3DDA0}
+</style>
+</helmet>
+<div style="width: 5800px; height: 2140px; box-sizing: border-box; padding: 80px; background: #1C1B19; display: flex; gap: 60px">
+  <sc-for list="{{fases}}" as="p" hint-placeholder-count="5">
+    <div style="display: flex; flex-direction: column; gap: 24px">
+      <div style="height: 36px; font-family: 'Futura', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: 0.24em; color: #B8B4AB">{{p.n}} · {{p.etiqueta}} · FOTO REAL</div>
+      <div style="position: relative; width: 1080px; height: 1920px; overflow: hidden; box-sizing: border-box; padding-top: 120px; display: flex; flex-direction: column; align-items: center; text-align: center; background: {{p.bg}}; color: {{p.ink}}">
+        <div style="display: flex; align-items: center; padding: 16px 32px; border-radius: 999px; background: {{p.logoBg}}">
+          <img src="/_blob/3f55c8410a4215c5202f523d66a689e0" alt="BienPremios" style="height: 54px; width: auto; display: block">
+        </div>
+        <div style="margin-top: 22px; font-family: 'Futura', sans-serif; font-weight: 500; font-size: 22px; letter-spacing: 0.28em; color: {{p.muted}}">BIENPREMIOS 2026 · DÉCIMA EDICIÓN</div>
+
+        <div style="position: relative; width: 1000px; height: 760px; margin-top: 40px; flex-shrink: 0">
+          <svg aria-hidden="true" viewBox="0 0 1000 760" width="1000" height="760" style="position: absolute; left: 0; top: 0">
+            <ellipse cx="500" cy="520" rx="470" ry="110" transform="rotate(-14 500 520)" fill="none" stroke="{{p.accent}}" stroke-width="10"></ellipse>
+          </svg>
+          <div style="position: absolute; left: 218px; top: 188px; width: 564px; height: 564px; box-sizing: border-box; border-radius: 50%; border: 2px solid {{p.accent}}"></div>
+          <div style="position: absolute; left: 230px; top: 200px; width: 540px; height: 540px; border-radius: 50%; background: {{p.circulo}}"></div>
+          <div style="position: absolute; left: 230px; top: 30px; width: 540px; height: 710px; overflow: hidden; border-radius: 0 0 270px 270px">
+            <img src="{{p.foto}}" alt="Figura recortada de la persona nominada" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 0%; display: block; filter: drop-shadow(0 18px 26px rgba(0,0,0,0.35))">
+          </div>
+          <svg aria-hidden="true" viewBox="0 0 1000 760" width="1000" height="760" style="position: absolute; left: 0; top: 0">
+            <path d="M 30 520 A 470 110 0 0 0 970 520" transform="rotate(-14 500 520)" fill="none" stroke="{{p.accent}}" stroke-width="10" stroke-linecap="round"></path>
+            <circle cx="880" cy="318" r="9" fill="{{p.accent}}"></circle>
+            <circle cx="918" cy="364" r="5" fill="{{p.ink}}"></circle>
+            <circle cx="112" cy="728" r="7" fill="{{p.accent}}"></circle>
+          </svg>
+        </div>
+
+        <div style="margin-top: 26px; font-family: 'Fiorina Grande', serif; font-style: italic; line-height: 1; font-size: {{p.size}}px; color: {{p.accent}}">{{p.st}}</div>
+        <div style="margin-top: 18px; font-family: 'Fiorina Title', serif; font-size: 70px; line-height: 1.1; letter-spacing: -0.01em">{{p.nombre}}</div>
+        <div style="margin-top: 26px; font-family: 'Futura', sans-serif; font-weight: 500; font-size: 22px; letter-spacing: 0.28em; color: {{p.muted}}">EN LA CATEGORÍA</div>
+        <div style="margin-top: 10px; max-width: 840px; font-family: 'Fiorina Subhead', serif; font-size: 42px; line-height: 1.25; color: {{p.ink2}}">{{p.cat}}</div>
+        <div style="margin-top: 36px; display: flex; gap: 10px">
+          <sc-for list="{{p.segs}}" as="s" hint-placeholder-count="5">
+            <div style="width: 92px; height: 6px; border-radius: 3px; background: {{s.c}}"></div>
+          </sc-for>
+        </div>
+        <div style="margin-top: 16px; font-family: 'Futura', sans-serif; font-weight: 500; font-size: 20px; letter-spacing: 0.24em; color: {{p.muted}}">ETAPA {{p.n}} DE 05 · {{p.etapa}}</div>
+        <div style="margin-top: 36px; font-family: 'Futura', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: 0.2em">{{p.cta}}</div>
+        <div style="margin-top: 20px; padding: 18px 40px; border-radius: 999px; font-family: 'Futura', sans-serif; font-weight: 700; font-size: 24px; letter-spacing: 0.14em; border: 2px solid {{p.accent}}; color: {{p.accent}}">{{p.link}}</div>
+        <div style="position: absolute; left: 0; right: 0; bottom: 88px; font-family: 'Futura', sans-serif; font-weight: 500; font-size: 20px; letter-spacing: 0.28em; color: {{p.muted}}">@BIENFEST · #BIENPREMIOS2026</div>
+      </div>
+    </div>
+  </sc-for>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":5800,"height":2140}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const F = [
+      { n: '01', etapa: 'NOMINACIÓN', st: 'Nominada', size: 132, cta: 'LA LISTA OFICIAL SE REVELA EL 29 DE OCTUBRE', link: 'BIENPREMIOS.COM', bg: '#0A0A0A', circulo: 'radial-gradient(circle at 50% 35%, #2A2620 0%, #141312 100%)', ink: '#F5F2EB', ink2: '#B8B4AB', muted: '#9C8A63', accent: '#C9A961', logoBg: 'transparent', segOn: '#C9A961', segOff: 'rgba(245,242,235,0.16)',
+        foto: '/_blob/da5e281e6a620c35330385b39383691f', nombre: 'Paola de la Garza', cat: 'Especialista o Coach de Salud Emocional y/o Mental' },
+      { n: '02', etapa: 'LISTA OFICIAL', st: 'Nominada oficial', size: 104, cta: 'VOTA POR MÍ HASTA EL 29 DE DICIEMBRE', link: 'BIENPREMIOS.COM/N/REBECCASUTTON', bg: 'radial-gradient(120% 55% at 50% 100%, rgba(182,24,39,0.45) 0%, rgba(182,24,39,0) 70%), #0A0A0A', circulo: 'radial-gradient(circle at 50% 35%, #C8202F 0%, #7A0F1A 100%)', ink: '#F5F2EB', ink2: '#C9C3B8', muted: '#B39A66', accent: '#E1B452', logoBg: 'transparent', segOn: '#E1B452', segOff: 'rgba(245,242,235,0.16)',
+        foto: '/_blob/c09d1b225bd47a230f93a4eda6717487', nombre: 'Rebecca Sutton', cat: 'Coach de Actividad Física o Fitness' },
+      { n: '03', etapa: 'SEMIFINAL', st: 'Semifinalista', size: 120, cta: 'VOTA POR MÍ DEL 4 DE ENERO AL 28 DE FEBRERO', link: 'BIENPREMIOS.COM/N/MARYCARDONA', bg: 'radial-gradient(110% 70% at 50% 30%, #44121A 0%, #1A0A0B 72%)', circulo: 'radial-gradient(circle at 50% 35%, #F5F2EB 0%, #D8C9B8 100%)', ink: '#F5F2EB', ink2: '#DCCFC0', muted: '#C9A961', accent: '#E1B452', logoBg: 'transparent', segOn: '#E1B452', segOff: 'rgba(245,242,235,0.18)',
+        foto: '/_blob/e7af9b3e7f28156d18bb8e5d40477771', nombre: 'Mary Cardona', cat: 'Podcast enfocado al BienEstar' },
+      { n: '04', etapa: 'FINAL', st: 'Finalista', size: 132, cta: 'VOTACIÓN FINAL · DEL 2 AL 18 DE MARZO', link: 'BIENPREMIOS.COM/N/TANYA', bg: 'radial-gradient(110% 70% at 50% 28%, #C8202F 0%, #8E1420 55%, #4A0B12 100%)', circulo: 'linear-gradient(160deg, #9A6E2A 0%, #D9A441 30%, #F7DE9C 55%, #C99A3E 100%)', ink: '#FFF8EC', ink2: '#F6E6C4', muted: '#F3DDA0', accent: '#F7DE9C', logoBg: 'transparent', segOn: '#F7DE9C', segOff: 'rgba(255,248,236,0.22)',
+        foto: '/_blob/7c71104a11530d4a46ca053acd794728', nombre: 'Tanya Buena Vibra', cat: 'Yogi o Maestro de Yoga que más ha inspirado' },
+      { n: '05', etapa: 'GALA', st: 'Ganador', size: 132, cta: 'GRACIAS POR CADA VOTO', link: 'BIENPREMIOS.COM/GANADORES', bg: 'linear-gradient(160deg, #9A6E2A 0%, #D9A441 28%, #F7DE9C 50%, #D4A94E 72%, #9A6E2A 100%)', circulo: 'radial-gradient(circle at 50% 35%, #2A2620 0%, #0A0A0A 100%)', ink: '#1A1A1A', ink2: '#33281A', muted: '#4A3410', accent: '#8E1420', logoBg: '#0A0A0A', segOn: '#1A1A1A', segOff: 'rgba(26,26,26,0.18)',
+        foto: '/_blob/6ce6f262d1886109b58a4ea8e59385df', nombre: 'Juan Luis Gallardo', cat: 'Médico Funcional / Médico Integral' },
+    ];
+    const fases = F.map((p, i) => Object.assign({}, p, {
+      etiqueta: p.st.toUpperCase(),
+      segs: [0, 1, 2, 3, 4].map((k) => ({ c: k <= i ? p.segOn : p.segOff })),
+    }));
+    return { fases };
+  }
+}
+</script>
+</body>
+</html>

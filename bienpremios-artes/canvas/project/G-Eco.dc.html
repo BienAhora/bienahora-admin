@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Dirección G · Eco dorado</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:"Fiorina Grande";src:url("/_blob/1331e8420289aae196e7f0eb7419073f") format("woff2");font-weight:400;font-style:italic}
+@font-face{font-family:"Fiorina Subhead";src:url("/_blob/686ac3953816f516899d261d63f65cb5") format("woff2");font-weight:400;font-style:italic}
+@font-face{font-family:"Futura";src:url("/_blob/794e319d8ebe117b5da69d03bdda8419") format("woff2");font-weight:500;font-style:normal}
+@font-face{font-family:"Futura";src:url("/_blob/28b675453421b95d9c24fea468df3466") format("woff2");font-weight:700;font-style:normal}
+body{margin:0}
+a{color:#9A6E2A}a:hover{color:#5A4317}
+</style>
+</helmet>
+<div style="width: 5800px; height: 2140px; box-sizing: border-box; padding: 80px; background: #1C1B19; display: flex; gap: 60px">
+  <sc-for list="{{fases}}" as="p" hint-placeholder-count="5">
+    <div style="display: flex; flex-direction: column; gap: 24px">
+      <div style="height: 36px; font-family: 'Futura', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: 0.24em; color: #B8B4AB">{{p.etiqueta}}</div>
+      <div style="position: relative; width: 1080px; height: 1920px; overflow: hidden; background: {{p.bg}}; color: {{p.ink}}">
+        <div style="position: absolute; left: 44px; top: 44px; right: 44px; bottom: 44px; border: 1px solid {{p.linea}}"></div>
+        <div style="position: absolute; left: 72px; top: 68px; font-family: 'Futura', sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0.32em; color: {{p.meta}}">BIENPREMIOS 2026</div>
+        <div style="position: absolute; right: 72px; top: 68px; font-family: 'Futura', sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0.32em; color: {{p.meta}}">DÉCIMA EDICIÓN</div>
+        <div style="position: absolute; left: 72px; bottom: 66px; font-family: 'Futura', sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0.32em; color: {{p.meta}}">CIUDAD DE MÉXICO</div>
+        <div style="position: absolute; right: 72px; bottom: 66px; font-family: 'Futura', sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0.32em; color: {{p.meta}}">2016 — 2026</div>
+
+        <div style="position: absolute; left: 0; right: 0; top: 112px; display: flex; justify-content: center">
+          <div style="position: relative; width: {{p.s.w}}px; height: {{p.s.h}}px">
+            <svg aria-hidden="true" viewBox="0 0 {{p.s.w}} {{p.s.h}}" width="{{p.s.w}}" height="{{p.s.h}}" style="position: absolute; left: 0; top: 0">
+              <path d="{{p.s.tallos}}" fill="none" stroke="{{p.tallo}}" stroke-width="2.5" stroke-linecap="round"></path>
+            </svg>
+            <sc-for list="{{p.s.hojas}}" as="h" hint-placeholder-count="36">
+              <div style="position: absolute; border-radius: 50%; left: {{h.l}}px; top: {{h.t}}px; width: {{h.w}}px; height: {{h.h}}px; transform: rotate({{h.r}}deg); background: {{h.bg}}"></div>
+            </sc-for>
+            <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center">
+              <img src="/_blob/b642db18d04ded2ea11283a89718d8b0" alt="" style="width: 70px; height: auto; display: block; margin-top: -22px">
+              <div style="font-family: 'Fiorina Grande', serif; font-style: italic; line-height: 0.95; white-space: pre-line; font-size: {{p.tam}}px; color: {{p.titulo}}">{{p.st}}</div>
+              <div style="font-family: 'Futura', sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0.36em; color: {{p.meta}}">DÉCIMA EDICIÓN</div>
+            </div>
+          </div>
+        </div>
+
+        <sc-for list="{{p.ecos}}" as="e" hint-placeholder-count="4">
+          <div style="position: absolute; left: 0; top: 520px; width: 1080px; height: 980px; overflow: hidden; opacity: {{e.o}}">
+            <img src="{{p.foto}}" alt="" style="position: absolute; left: 90px; top: 0; width: 900px; height: 980px; object-fit: contain; object-position: 50% 100%; transform: translateX(-3000px); filter: drop-shadow({{e.d}}px 0 0 {{e.c}})">
+          </div>
+        </sc-for>
+        <img src="{{p.foto}}" alt="Figura de la persona nominada" style="position: absolute; left: 90px; top: 520px; width: 900px; height: 980px; object-fit: contain; object-position: 50% 100%; filter: drop-shadow(2.5px 0 0 {{p.contorno}}) drop-shadow(-2.5px 0 0 {{p.contorno}}) drop-shadow(0 2.5px 0 {{p.contorno}}) drop-shadow(0 -2.5px 0 {{p.contorno}}) drop-shadow(0 24px 30px rgba(40,30,20,0.20))">
+        <div style="position: absolute; left: 140px; right: 140px; top: 1500px; height: 1px; background: {{p.linea}}"></div>
+        <div style="position: absolute; left: 534px; top: 1494px; width: 12px; height: 12px; border-radius: 50%; background: {{p.acento}}"></div>
+
+        <div style="position: absolute; left: 70px; right: 70px; top: 1548px; display: flex; flex-direction: column; align-items: center; text-align: center">
+          <div style="font-family: 'Fiorina Grande', serif; font-style: italic; font-size: 104px; line-height: 1; letter-spacing: -0.01em"><span style="color: {{p.ink}}">{{p.nombre}}</span><span style="color: {{p.acento}}">{{p.apellido}}</span></div>
+          <div style="margin-top: 18px; max-width: 860px; font-family: 'Fiorina Subhead', serif; font-style: italic; font-size: 33px; line-height: 1.3; color: {{p.ink2}}">{{p.cat}}</div>
+          <div style="margin-top: 26px; font-family: 'Futura', sans-serif; font-weight: 500; font-size: 19px; letter-spacing: 0.28em; color: {{p.meta}}">{{p.link}}</div>
+        </div>
+      </div>
+    </div>
+  </sc-for>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":5800,"height":2140}}'>
+class Component extends DCLogic {
+  sello(k, bg) {
+    const cx = 230, cy = 170, R = 135, hojas = [];
+    for (let i = 0; i < 9; i++) {
+      const deg = 118 + i * 15, t = deg * Math.PI / 180, s = 1 - i * 0.04;
+      [[R + 12, -32], [R - 12, 32]].forEach(([rr, tilt]) => {
+        const rot = deg + 90 + tilt, rx = 19 * s, ry = 7 * s;
+        const a = rot * Math.PI / 180;
+        const x = cx + rr * Math.cos(t) + Math.cos(a) * rx * 0.6;
+        const y = cy + rr * Math.sin(t) + Math.sin(a) * rx * 0.6;
+        [[x, rot], [2 * cx - x, 180 - rot]].forEach(([hx, hr]) => hojas.push({
+          l: ((hx - rx) * k).toFixed(1), t: ((y - ry) * k).toFixed(1),
+          w: (2 * rx * k).toFixed(1), h: (2 * ry * k).toFixed(1), r: hr.toFixed(1), bg,
+        }));
+      });
+    }
+    const pt = (deg) => [cx + R * Math.cos(deg * Math.PI / 180), cy + R * Math.sin(deg * Math.PI / 180)];
+    const [a0, a1] = [pt(114), pt(242)];
+    const f = (v) => (v * k).toFixed(1);
+    const tallos = 'M ' + f(a0[0]) + ' ' + f(a0[1]) + ' A ' + f(R) + ' ' + f(R) + ' 0 0 1 ' + f(a1[0]) + ' ' + f(a1[1]) +
+      ' M ' + f(2 * cx - a0[0]) + ' ' + f(a0[1]) + ' A ' + f(R) + ' ' + f(R) + ' 0 0 0 ' + f(2 * cx - a1[0]) + ' ' + f(a1[1]);
+    return { hojas, tallos, w: Math.round(460 * k), h: Math.round(300 * k) };
+  }
+  renderVals() {
+    const P = [
+      { foto: '/_blob/72f5be06b02ce16e354b4fdfc8c72b4b', g: 0, nombre: 'Tanya ', apellido: 'Buena Vibra', cat: 'Yogi o Maestro de Yoga que más ha inspirado', h: 'TANYA' },
+      { foto: '/_blob/1cceeed14459223c1ca8d1e2475d926c', g: 0, nombre: 'Wera ', apellido: 'de la Garza', cat: 'Coach de Actividad Física o Fitness', h: 'WERADELAGARZA' },
+      { foto: '/_blob/a63588365724cb7f2f63de53d45dd582', g: 0, nombre: 'Mary ', apellido: 'Cardona', cat: 'Podcast enfocado al BienEstar', h: 'MARYCARDONA' },
+      { foto: '/_blob/3236147155130c786920a9ac1f01e43d', g: 0, nombre: 'Arlette ', apellido: 'Ramírez', cat: 'Blogger o Influencer con mayor impacto en el BienEstar', h: 'ARLETTERAMIREZ' },
+      { foto: '/_blob/0b9acf992da011820409f565879ab595', g: 1, nombre: 'Marco Antonio ', apellido: 'Regil', cat: 'Profesional con mayor impacto en el BienEstar y la salud', h: '' },
+    ];
+    const ST = [['Nominada', 'Nominado'], ['Nominada\noficial', 'Nominado\noficial'], ['Semifinalista', 'Semifinalista'], ['Finalista', 'Finalista'], ['Ganadora', 'Ganador']];
+    const TAM = [60, 46, 42, 62, 62];
+    const papel = '#F4EFE6';
+    const F = [
+      { bg: papel, ink: '#1A1A1A', ink2: '#4A443C', meta: '#7E766B', linea: 'rgba(26,26,26,0.16)', titulo: '#1A1A1A', acento: '#9A6E2A', contorno: '#D9A441', tallo: '#9A6E2A', hoja: 'linear-gradient(90deg, #8A6224, #D9A441)',
+        ecos: [[-80, '#C9A961', 0.30], [80, '#C9A961', 0.30]] },
+      { bg: papel, ink: '#1A1A1A', ink2: '#4A443C', meta: '#7E766B', linea: 'rgba(26,26,26,0.16)', titulo: '#B61827', acento: '#B61827', contorno: '#E1B452', tallo: '#9A6E2A', hoja: 'linear-gradient(90deg, #8A6224, #E1B452)',
+        ecos: [[-84, '#B61827', 0.26], [84, '#B61827', 0.26]] },
+      { bg: '#F1E8DF', ink: '#1A1A1A', ink2: '#4A3A36', meta: '#7E6B66', linea: 'rgba(58,14,20,0.18)', titulo: '#6E1623', acento: '#6E1623', contorno: '#D9A441', tallo: '#6E1623', hoja: 'linear-gradient(90deg, #6E1623, #B8893A)',
+        ecos: [[-150, '#6E1623', 0.14], [-76, '#6E1623', 0.28], [76, '#C9A961', 0.32], [150, '#C9A961', 0.16]] },
+      { bg: papel, ink: '#1A1A1A', ink2: '#4A443C', meta: '#7E766B', linea: 'rgba(26,26,26,0.16)', titulo: '#B61827', acento: '#B61827', contorno: '#E1B452', tallo: '#B61827', hoja: 'linear-gradient(90deg, #B61827, #E1B452)',
+        ecos: [[-156, '#B61827', 0.16], [-78, '#B61827', 0.32], [78, '#E1B452', 0.40], [156, '#E1B452', 0.20]] },
+      { bg: 'linear-gradient(160deg, #E4CB93 0%, #F7E8C2 46%, #DDBD78 100%)', ink: '#1A1A1A', ink2: '#3A2E1C', meta: '#5A4317', linea: 'rgba(26,26,26,0.22)', titulo: '#8E1420', acento: '#8E1420', contorno: '#FFF6DC', tallo: '#8E1420', hoja: 'linear-gradient(90deg, #5A1018, #8E1420)',
+        ecos: [[-216, '#8E1420', 0.10], [-144, '#8E1420', 0.18], [-72, '#8E1420', 0.30], [72, '#8E1420', 0.30], [144, '#8E1420', 0.18], [216, '#8E1420', 0.10]] },
+    ];
+    const fases = F.map((f, i) => {
+      const p = P[i], st = ST[i][p.g];
+      return Object.assign({}, f, p, {
+        st, tam: TAM[i], s: this.sello(1.2, f.hoja),
+        etiqueta: st.replace('\n', ' ').toUpperCase() + ' · ECO DORADO',
+        ecos: f.ecos.map(([dx, c, o]) => ({ d: 3000 + dx, c, o })),
+        link: p.h ? 'BIENPREMIOS.COM/N/' + p.h : 'GALA BIENPREMIOS 2026',
+      });
+    });
+    return { fases };
+  }
+}
+</script>
+</body>
+</html>

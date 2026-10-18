@@ -1,0 +1,34 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-12T02:50:00Z"},
+  "title": "Artes BienPremios 2026",
+  "launch": {"view": "canvas", "page": "r2"},
+  "pages": [
+    {"id": "r2", "name": "Ronda 2 · Cada etapa es un triunfo"},
+    {"id": "r1", "name": "Ronda 1"}
+  ],
+  "boards": {
+    "F2-PortadaEco.dc.html": {"x": 0, "y": 0, "w": 5800, "h": 2140, "title": "F2 · Portada con eco — historias 9:16 (nueva)", "page": "r2"},
+    "F2-Post.dc.html": {"x": 0, "y": 2340, "w": 5800, "h": 1570, "title": "F2 · Portada con eco — post de feed 4:5", "page": "r2"},
+    "F-Portada.dc.html": {"x": 0, "y": 4110, "w": 5800, "h": 2140, "title": "F · Portada de revista — historias 9:16", "page": "r2"},
+    "G-Eco.dc.html": {"x": 0, "y": 6450, "w": 5800, "h": 2140, "title": "G · Eco dorado — historias 9:16", "page": "r2"},
+    "E-Reflector.dc.html": {"x": 0, "y": 8790, "w": 5800, "h": 2140, "title": "E · Bajo el reflector — historias 9:16", "page": "r2"},
+    "Promo-Nominaciones.dc.html": {"x": 0, "y": 11130, "w": 7880, "h": 3020, "title": "Promoción · nominaciones y marcas 4:5 (13 artes)", "page": "r2"},
+    "Promo-Historias.dc.html": {"x": 0, "y": 14350, "w": 7880, "h": 4240, "title": "Promoción · nominaciones y marcas historias 9:16 (13 artes)", "page": "r2"},
+    "Main.dc.html": {"x": 0, "y": 0, "w": 2400, "h": 1400, "title": "Guía · color y copy por etapa", "page": "r1"},
+    "A-Orbita.dc.html": {"x": 0, "y": 1600, "w": 5800, "h": 2140, "title": "A · Órbita — historias 9:16", "page": "r1"},
+    "B-Portada.dc.html": {"x": 0, "y": 3940, "w": 5800, "h": 2140, "title": "B · Portada editorial — historias 9:16", "page": "r1"},
+    "C-Podio.dc.html": {"x": 0, "y": 6280, "w": 5800, "h": 2140, "title": "C · Podio — historias 9:16", "page": "r1"},
+    "A-Orbita-Post.dc.html": {"x": 0, "y": 8620, "w": 5800, "h": 1570, "title": "A · Órbita — post de feed 4:5", "page": "r1"},
+    "A-Orbita-Marca.dc.html": {"x": 0, "y": 10390, "w": 4660, "h": 2140, "title": "A · Órbita — versión para marcas", "page": "r1"},
+    "Perfil.dc.html": {"x": 4740, "y": 10390, "w": 3400, "h": 820, "title": "Marco para foto de perfil", "page": "r1"},
+    "D-Recorte.dc.html": {"x": 0, "y": 12730, "w": 5800, "h": 2140, "title": "D · Figura recortada — fotos reales, historias 9:16", "page": "r1"},
+    "A2-OrbitaRecorte.dc.html": {"x": 0, "y": 15070, "w": 5800, "h": 2140, "title": "A2 · Órbita con recorte — fotos reales, historias 9:16", "page": "r1"},
+    "Fotos-Guia.dc.html": {"x": 0, "y": 17410, "w": 3320, "h": 1900, "title": "Fotos reales · qué sirve y qué pedir", "page": "r1"}
+  },
+  "order": ["F2-PortadaEco.dc.html", "F2-Post.dc.html", "F-Portada.dc.html", "G-Eco.dc.html", "E-Reflector.dc.html", "Promo-Nominaciones.dc.html", "Promo-Historias.dc.html", "Main.dc.html", "A-Orbita.dc.html", "B-Portada.dc.html", "C-Podio.dc.html", "A-Orbita-Post.dc.html", "A-Orbita-Marca.dc.html", "Perfil.dc.html", "D-Recorte.dc.html", "A2-OrbitaRecorte.dc.html", "Fotos-Guia.dc.html"],
+  "notes": {
+    "r2titulo": {"x": 0, "y": -300, "text": "Ronda 2 · Cada arte se siente como ganar", "kind": "title1", "maxW": 5800, "page": "r2"}
+  },
+  "designSystems": []
+}

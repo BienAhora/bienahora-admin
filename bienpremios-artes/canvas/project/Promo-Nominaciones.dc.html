@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Promoción · Nominaciones BienPremios 2026</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:"Fiorina Grande";src:url("/_blob/1af7dc8a0421fe9d7394b366718932ed") format("woff2");font-weight:400;font-style:normal}
+@font-face{font-family:"Fiorina Grande";src:url("/_blob/1331e8420289aae196e7f0eb7419073f") format("woff2");font-weight:400;font-style:italic}
+@font-face{font-family:"Futura";src:url("/_blob/794e319d8ebe117b5da69d03bdda8419") format("woff2");font-weight:500;font-style:normal}
+@font-face{font-family:"Futura";src:url("/_blob/28b675453421b95d9c24fea468df3466") format("woff2");font-weight:700;font-style:normal}
+body{margin:0}
+a{color:#C9A961}a:hover{color:#F3DDA0}
+</style>
+</helmet>
+<div style="width: 7880px; height: 3020px; box-sizing: border-box; padding: 80px; background: #1C1B19; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); column-gap: 60px; row-gap: 120px">
+  <sc-for list="{{artes}}" as="p" hint-placeholder-count="13">
+    <div style="display: flex; flex-direction: column; gap: 24px">
+      <div style="height: 36px; font-family: 'Futura', sans-serif; font-weight: 700; font-size: 24px; letter-spacing: 0.22em; color: #B8B4AB">{{p.etiqueta}}</div>
+      <div style="position: relative; width: 1080px; height: 1350px; overflow: hidden; background: {{p.bg}}">
+        <img src="{{p.foto}}" alt="" style="position: absolute; left: -60px; top: -60px; width: 1200px; height: 760px; object-fit: cover; object-position: 50% 30%; filter: blur(30px) brightness(0.95) saturate(1.05); opacity: 0.85; -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 45%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(180deg, #000 0%, #000 45%, rgba(0,0,0,0) 100%)">
+        <img src="{{p.foto}}" alt="Gala BienPremios" style="position: absolute; left: 0; top: {{p.ft}}px; width: 1080px; height: {{p.fh}}px; object-fit: cover; filter: brightness({{p.br}}) contrast(1.06) saturate(1.05); -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000 9%, #000 72%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000 9%, #000 72%, rgba(0,0,0,0) 100%)">
+        <div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 560px; text-align: center; font-family: 'Fiorina Grande', serif; font-size: 980px; line-height: 0.8; color: transparent; -webkit-background-clip: text; background-clip: text; background-image: linear-gradient(115deg, #8A6224 0%, #D9A441 26%, #F7DE9C 48%, #C99A3E 68%, #8A6224 100%); opacity: 0.10">X</div>
+
+        <div style="position: absolute; left: 0; right: 0; top: 596px; display: flex; flex-direction: column; align-items: center; gap: 12px">
+          <div style="display: flex; align-items: center; gap: 26px">
+            <div style="width: 110px; height: 1px; background: rgba(225,180,82,0.45)"></div>
+            <div style="display: flex; align-items: center; gap: 18px">
+              <img src="/_blob/3f55c8410a4215c5202f523d66a689e0" alt="BienPremios" style="width: 400px; height: auto; display: block">
+              <span style="font-family: 'Fiorina Grande', serif; line-height: 0.8; font-size: 128px; color: #E1B452">X</span>
+            </div>
+            <div style="width: 110px; height: 1px; background: rgba(225,180,82,0.45)"></div>
+          </div>
+          <div style="font-family: 'Futura', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.42em; color: #C9A961">DÉCIMA EDICIÓN</div>
+        </div>
+
+        <div style="position: absolute; left: 60px; right: 60px; top: 770px; display: flex; flex-direction: column; align-items: center; text-align: center">
+          <div style="font-family: 'Futura', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.36em; color: #E1B452">{{p.kicker}}</div>
+          <div style="margin-top: 26px; font-family: 'Fiorina Grande', serif; font-size: 64px; line-height: 1; color: #F5F2EB">{{p.l1}}</div>
+          <div style="margin-top: 10px; font-family: 'Fiorina Grande', serif; line-height: 1.02; white-space: nowrap; letter-spacing: -0.015em; color: transparent; -webkit-background-clip: text; background-clip: text; background-image: linear-gradient(115deg, #B8893A 0%, #E1B452 30%, #F7DE9C 50%, #D9A441 70%, #B8893A 100%); font-size: {{p.t2}}px">{{p.l2}}</div>
+          <div style="margin-top: {{p.m3}}px; font-family: 'Fiorina Grande', serif; font-style: italic; line-height: 0.95; white-space: nowrap; color: #F5F2EB; font-size: {{p.t3}}px">{{p.l3}}</div>
+        </div>
+
+        <div style="position: absolute; left: 0; right: 0; bottom: 74px; display: flex; flex-direction: column; align-items: center; gap: 20px">
+          <div style="padding: 18px 46px; border-radius: 999px; border: 2px solid #C9A961; font-family: 'Futura', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: 0.22em; color: #E1B452">{{p.liga}}</div>
+          <div style="font-family: 'Futura', sans-serif; font-weight: 500; font-size: 16px; letter-spacing: 0.32em; color: rgba(245,242,235,0.72)">{{p.nota}}</div>
+          <sc-if value="{{p.nota2}}"><div style="margin-top: -8px; font-family: 'Futura', sans-serif; font-weight: 500; font-size: 14px; letter-spacing: 0.26em; color: #C9A961">{{p.nota2}}</div></sc-if>
+        </div>
+      </div>
+    </div>
+  </sc-for>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":7880,"height":3020}}'>
+class Component extends DCLogic {
+  renderVals() {
+    /* Dos textos: especialistas (se nominan) y marcas (se postulan, como dice la landing). Tamaños medidos con la tipografía. */
+    const ESP = { tipo: 'ESPECIALISTA', bg: 'radial-gradient(90% 60% at 50% 72%, #4A121B 0%, #2A0A0F 55%, #120406 100%)', fundido: 'linear-gradient(180deg, rgba(18,4,6,0.15) 0%, rgba(18,4,6,0) 30%, rgba(42,10,15,0.55) 72%, #2A0A0F 100%)',
+      kicker: 'NOMINACIONES ABIERTAS', l1: 'Nomina a tu', l2: 'Especialista Wellness', t2: 88, l3: 'favorito', t3: 128, m3: -2, liga: 'BIENPREMIOS.COM', nota: 'CIERRAN EL 25 DE OCTUBRE', nota2: '' };
+    const MAR = { tipo: 'MARCA', bg: 'radial-gradient(90% 60% at 50% 72%, #2E2618 0%, #0E0D0B 55%, #050505 100%)', fundido: 'linear-gradient(180deg, rgba(5,5,5,0.15) 0%, rgba(5,5,5,0) 30%, rgba(14,13,11,0.55) 72%, #0E0D0B 100%)',
+      kicker: 'POSTULACIONES ABIERTAS', l1: 'Postula tu', l2: 'marca wellness', t2: 120, l3: 'de productos o servicios', t3: 52, m3: 14, liga: 'BIENPREMIOS.COM/MARCAS', nota: 'CIERRAN EL 25 DE OCTUBRE', nota2: 'EXPOSITORES BIENFEST: HASTA EL 30 DE NOVIEMBRE' };
+    /* [nombre, foto, alto a 1080 px, aclarado según qué tan oscura venía la foto, texto] */
+    const fotos = [
+      ['FOMO-01', 'ca96b56d7f5f25d845a50708ab19e5c3', 498, 1.4, ESP], ['FOMO-02', '7f1f2fe2ec712b73bb03e0622b00f482', 522, 1.4, MAR],
+      ['FOMO-03', 'b043878d70f9546e28009200babcc9a9', 620, 1.0, ESP], ['FOMO-04', 'ccefdd99a049f2be4345409a1b1dfea8', 522, 1.12, MAR],
+      ['FOMO-05', 'd6b5ebf735efa531a10a2fa1bb458a7a', 498, 1.4, ESP], ['FOMO-06', '366ebee6dee9c9c4b00bc64185386b12', 522, 1.4, MAR],
+      ['FOMO-07', 'd14026c1b35539de038834b8f6e356cf', 498, 1.4, ESP], ['FOMO-08', '69f287aa49f6dd6709ea1e4e74fd34a7', 522, 1.4, MAR],
+      ['FOMO-09', 'c3f7aa6f684ba867e0e092ff0bcf0c41', 498, 1.4, ESP], ['FOMO-10', '686bf0d8a9bc301e0674010743f4f2b3', 522, 1.29, MAR],
+      ['FOMO-11', '9bc495823cd0affde0f1f65f5446b2ca', 498, 1.4, ESP], ['V1 ESPECIALISTAS', '2877ac02cdc7f589b110dfe6a031bab0', 504, 1.11, ESP],
+      ['V1 MARCAS', '77fec159f268a3f218b9743313b9ea89', 520, 1.14, MAR],
+    ];
+    /* Foto completa a todo lo ancho (alto = proporción real), con su base en el logo; arriba la rellena la misma foto desenfocada. */
+    const artes = fotos.map(([n, id, h, br, t]) => Object.assign({}, t, { foto: '/_blob/' + id, fh: h, br, ft: 650 - h, etiqueta: n + ' · ' + t.tipo }));
+    return { artes };
+  }
+}
+</script>
+</body>
+</html>

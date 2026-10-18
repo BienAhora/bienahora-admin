@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Fotos reales · qué sirve y qué pedir</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:"Fiorina Grande";src:url("/_blob/1af7dc8a0421fe9d7394b366718932ed") format("woff2");font-weight:400;font-style:normal}
+@font-face{font-family:"Fiorina Title";src:url("/_blob/efee3ad49f72c4757b56ad07369ca699") format("woff2");font-weight:400;font-style:normal}
+@font-face{font-family:"Fiorina Subhead";src:url("/_blob/2aefc2cf4d0c783c1a257288f3013926") format("woff2");font-weight:400;font-style:normal}
+@font-face{font-family:"Futura";src:url("/_blob/794e319d8ebe117b5da69d03bdda8419") format("woff2");font-weight:500;font-style:normal}
+@font-face{font-family:"Futura";src:url("/_blob/28b675453421b95d9c24fea468df3466") format("woff2");font-weight:700;font-style:normal}
+body{margin:0}
+a{color:#C9A961}a:hover{color:#F3DDA0}
+</style>
+</helmet>
+<div style="width: 3320px; height: 1900px; box-sizing: border-box; padding: 110px; background: #0A0A0A; color: #F5F2EB; display: flex; flex-direction: column; gap: 56px">
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 80px">
+    <div style="display: flex; flex-direction: column; gap: 22px">
+      <div style="font-family: 'Futura', sans-serif; font-weight: 500; font-size: 22px; letter-spacing: 0.26em; color: #9C8A63">FOTOS REALES DE NOMINADOS · SIN RECORTAR</div>
+      <h1 style="margin: 0; font-family: 'Fiorina Grande', serif; font-weight: 400; font-size: 96px; line-height: 1; letter-spacing: -0.01em">Así llegan las fotos. <span style="color: #C9A961">Así las usamos.</span></h1>
+    </div>
+    <p style="margin: 0; max-width: 900px; font-family: 'Fiorina Subhead', serif; font-size: 30px; line-height: 1.35; color: #B8B4AB">Cada foto trae otro fondo, otro encuadre y otra resolución. Al recortar la figura, todas quedan sobre el color de la etapa y la serie se ve pareja.</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 32px">
+    <sc-for list="{{fotos}}" as="f" hint-placeholder-count="11">
+      <div style="box-sizing: border-box; border-radius: 22px; padding: 22px; background: #141312; border: 1px solid rgba(245,242,235,0.08); display: flex; flex-direction: column; gap: 14px">
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+          <div style="height: 320px; border-radius: 12px; overflow: hidden; background: #1C1B19">
+            <img src="{{f.o}}" alt="Foto original de {{f.nombre}}" style="width: 100%; height: 100%; object-fit: contain; display: block">
+          </div>
+          <div style="height: 320px; border-radius: 12px; overflow: hidden; background: radial-gradient(circle at 50% 40%, #C8202F 0%, #7A0F1A 100%)">
+            <img src="{{f.c}}" alt="Recorte de {{f.nombre}}" style="width: 100%; height: 100%; object-fit: contain; object-position: 50% 100%; display: block">
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; font-family: 'Futura', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.22em; color: #7E7A72">
+          <div>ORIGINAL</div>
+          <div>RECORTE</div>
+        </div>
+        <div style="font-family: 'Fiorina Title', serif; font-size: 34px; line-height: 1.1">{{f.nombre}}</div>
+        <div style="font-family: 'Futura', sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0.2em; color: #9C8A63">{{f.px}}</div>
+        <div style="display: flex">
+          <div style="display: inline-flex; align-items: center; height: 42px; padding: 0 20px; box-sizing: border-box; border-radius: 999px; font-family: 'Futura', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.18em; background: {{f.chipBg}}; color: {{f.chipInk}}; border: {{f.chipBorde}}">{{f.veredicto}}</div>
+        </div>
+        <div style="font-family: 'Fiorina Subhead', serif; font-size: 22px; line-height: 1.35; color: #B8B4AB">{{f.nota}}</div>
+      </div>
+    </sc-for>
+    <div style="box-sizing: border-box; border-radius: 22px; padding: 32px; background: #141312; border: 2px solid #C9A961; display: flex; flex-direction: column; gap: 18px">
+      <div style="font-family: 'Futura', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 0.24em; color: #E1B452">LO QUE PEDIMOS A CADA NOMINADO</div>
+      <div style="font-family: 'Fiorina Title', serif; font-size: 40px; line-height: 1.1">Una foto, bien tomada.</div>
+      <div style="height: 1px; background: rgba(201,169,97,0.35)"></div>
+      <div style="font-family: 'Fiorina Subhead', serif; font-size: 23px; line-height: 1.35; color: #D8D1C4">Vertical, de al menos 1080 × 1350 px.</div>
+      <div style="font-family: 'Fiorina Subhead', serif; font-size: 23px; line-height: 1.35; color: #D8D1C4">De la cintura para arriba o cuerpo completo, sin cortar la cabeza ni las manos.</div>
+      <div style="font-family: 'Fiorina Subhead', serif; font-size: 23px; line-height: 1.35; color: #D8D1C4">Fondo liso de preferencia; sin texto, marcos ni filtros.</div>
+      <div style="font-family: 'Fiorina Subhead', serif; font-size: 23px; line-height: 1.35; color: #D8D1C4">Luz de frente y mirada a cámara.</div>
+      <div style="font-family: 'Fiorina Subhead', serif; font-size: 23px; line-height: 1.35; color: #D8D1C4">El archivo original: no captura de pantalla ni reenviada por WhatsApp.</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":3320,"height":1900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const LISTA = { veredicto: 'LISTA', chipBg: '#C9A961', chipInk: '#1A1A1A', chipBorde: '0 solid transparent' };
+    const AJUSTE = { veredicto: 'SIRVE CON AJUSTE', chipBg: 'transparent', chipInk: '#E1B452', chipBorde: '2px solid #C9A961' };
+    const OTRA = { veredicto: 'PEDIR OTRA', chipBg: '#B61827', chipInk: '#F7F4EE', chipBorde: '0 solid transparent' };
+    const fotos = [
+      Object.assign({ nombre: 'Marco Antonio Regil', px: '4160 × 6240 PX', o: '/_blob/80dae84c81c97a8094680763556a42d7', c: '/_blob/561b0b038c57458eb8731be175662265', nota: 'Alta resolución y fondo blanco: la mejor referencia.' }, LISTA),
+      Object.assign({ nombre: 'Wera de la Garza', px: '1365 × 2048 PX', o: '/_blob/adb4955f2b4e7ac261f77f9c2c16ac48', c: '/_blob/43946b8eb7602ef9671a52eea17939b6', nota: 'Foto de estudio vertical. Funciona en todas las direcciones.' }, LISTA),
+      Object.assign({ nombre: 'Arlette Ramírez', px: '929 × 1233 PX', o: '/_blob/5ee656c4b4680e698c00d5c40d889d4e', c: '/_blob/f82cfac463e954535a1a0f8eca789d25', nota: 'Cuerpo completo y fondo liso: recorte limpio.' }, LISTA),
+      Object.assign({ nombre: 'Dani · Latina', px: '1388 × 2048 PX', o: '/_blob/f13b4f5b754ce6a3aed25fce51604358', c: '/_blob/fd386b7a31a305696acbb85a95287e08', nota: 'El fondo rosa se elimina sin problema.' }, LISTA),
+      Object.assign({ nombre: 'Juan Luis Gallardo', px: '1080 × 1080 PX', o: '/_blob/e4051b0f9706896e51fd8dcd0942c8c7', c: '/_blob/6ce6f262d1886109b58a4ea8e59385df', nota: 'Medio cuerpo y fondo liso: perfecta para círculo y recorte.' }, LISTA),
+      Object.assign({ nombre: 'Tanya Buena Vibra', px: '3425 × 5135 PX', o: '/_blob/5f8d3cd189527b8b2a6b31acc822e167', c: '/_blob/7c71104a11530d4a46ca053acd794728', nota: 'Pose horizontal de yoga: luce más en círculo que en figura vertical.' }, LISTA),
+      Object.assign({ nombre: 'Mary Cardona', px: '1509 × 2264 PX', o: '/_blob/a00123003efea7393eaabccc5659a553', c: '/_blob/e7af9b3e7f28156d18bb8e5d40477771', nota: 'Telón pintado: recortada queda bien; con la foto completa se ve recargada.' }, AJUSTE),
+      Object.assign({ nombre: 'Paola de la Garza', px: '960 × 1280 PX', o: '/_blob/90622f7559dfb5941fbf7bb794422449', c: '/_blob/da5e281e6a620c35330385b39383691f', nota: 'Cortada a la altura de la mesa: el círculo o el podio tapan el corte.' }, AJUSTE),
+      Object.assign({ nombre: 'Rebecca Sutton', px: '720 × 678 PX', o: '/_blob/183c3e1cff7b7086f3206a95edaa2b0f', c: '/_blob/c09d1b225bd47a230f93a4eda6717487', nota: 'Fondo de gimnasio y 720 px: bien en círculo, se suaviza a cuerpo completo.' }, AJUSTE),
+      Object.assign({ nombre: 'Rinat Kalifah', px: '738 × 738 PX', o: '/_blob/bd4a79182d3dac9c930ecd4100ecaf41', c: '/_blob/1c2f574c48661c3066add7369cf478b6', nota: 'Fondo de ladrillo y una silla que hubo que borrar a mano.' }, AJUSTE),
+      Object.assign({ nombre: 'Diego Martínez Conde', px: '236 × 268 PX', o: '/_blob/a5ae0ec146c764fe0af5f995d2340cc5', c: '/_blob/dbefef4cea826f1b27e54531c5a8e576', nota: 'Se pixelea en cualquier formato. Pedir el original de al menos 1080 px.' }, OTRA),
+    ];
+    return { fotos };
+  }
+}
+</script>
+</body>
+</html>
